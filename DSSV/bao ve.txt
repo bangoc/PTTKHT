@@ -15,14 +15,18 @@ Thu 3, 20/12/2016
 9h30:N16
 9h45:N17
 Thu 4, 21/12/2016
-9h00:Nhom 24
-9h15:Nhom 3
-9h30:
-Thu 5, 21/12/2016
-9h00:Nhom 4
-9h15:Nhom 12
-9h30:Nhom 2
-9h45:Nhom 8
+9h00:N24
+9h15:N3
+9h30:N23
+Thu 5, 22/12/2016
+9h00:N4
+9h15:N12
+9h30:N2
+9h45:N8
+Thu 6, 23/12/2016
+9h00:N13
+9h15:N21
+
 
 *Các nhóm còn lại:
 Thầy nhận đồ án vào buổi sáng các ngày tiếp theo, 
