@@ -1,12 +1,12 @@
 19/12/2016
 6h45: N5
-7h00: N26
+7h00: N26 (Xin doi lich)
 7h15: N7
 7h30: N18
 7h45: N9
 8h00: N17 (xin doi lich)
 8h15: N14
-8h30: N23
+8h30: N23 (xin doi lich)
 8h45: N1
 
 Thu 3, 20/12/2016
@@ -21,7 +21,8 @@ Thu 4, 21/12/2016
 Thu 5, 21/12/2016
 9h00:Nhom 4
 9h15:Nhom 12
-
+9h30:Nhom 2
+9h45:Nhom 8
 
 *Các nhóm còn lại:
 Thầy nhận đồ án vào buổi sáng các ngày tiếp theo, 
@@ -31,3 +32,6 @@ Tiêu đề mail: [PTTKHT] Nhóm abc đăng ký thứ 3 hoặc thứ 5
 Nội dung có thể để trống. Trong tiêu đề mail liệt kê những ngày mà nhóm có thể đến bảo vệ trong tg như trên.
 * Tùy thuộc vào tình hình đăng ký, thầy sẽ cập nhật lại tg bảo vệ hàng ngày.
 các nhóm ko đăng ký mặc định sẽ bảo vệ vào ngày thứ 7, cũng ở B1.
+
+
+Xem lại chương Moving to Design, kiểm tra lại kết quả pttk theo hướng dẫn.
