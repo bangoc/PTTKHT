@@ -1,0 +1,66 @@
+SIE 2017 HK2
+---------------
+Nhóm 5
+Trần Nam Anh (nhóm 1 người??)
+Nguyễn Hoàng Trung Kiên
+Hoàng Văn Nam
+Tạ Tuấn Anh
+* Quản lý cửa hàng sách
+---
+Nhóm 1:
+Trần Ngọc Sơn *
+Nguyễn Việt Dũng
+Đỗ Tuấn Anh
+Nguyễn Tuấn Anh
+* Quản lý đội bóng
+
+Nhóm 2:
+Nguyễn Hoàng Anh *
+Bùi Anh Hảo
+Đỗ Văn Chiến
+Hoàng Huy Quân
+* Quản lý cửa hàng băng đĩa nhạc
+
+Nhóm 3:
+Nguyễn Hoàng Lâm *
+Nguyễn Thị Việt Trang
+Đặng Thị Trinh
+Nguyễn Văn Duy
+* Quản lý cửa hàng bán đồ điện tử
+
+Nhóm 4:
+Đỗ Quốc Minh *
+Nguyễn Sỹ Huy
+Phạm Hoàng Tiến
+Nguyễn Thị Quyên
+* Quản lý quán cafe
+
+-----------------------
+Nhóm 6:
+Phạm Quang Huy*
+Chử Hoài Linh
+Nguyễn Lê Việt Anh
+Vũ Quốc Hưng
+* Quản lý thu viện sách
+
+Nhóm 7:
+Lã Thanh Tùng *
+Hà Như Bách
+Nguyễn Khánh Nam
+Ngô Diệu Linh
+* Đặt chỗ máy bay
+
+Nhóm 8:
+Nguyễn Quang Nhật *
+Lê Văn Tươi
+Vũ Nhật Lệ
+Nguyễn Hoàng Phong
+* Quản lý gara ô-tô
+
+Nhóm 9
+Đỗ Thanh Hà *
+Vũ Nhật Huy
+Chung Minh Quang
+Nguyễn Minh Huy
+Trương Quốc Anh
+* Bán vé máy bay
