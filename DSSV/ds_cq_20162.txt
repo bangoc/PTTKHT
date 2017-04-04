@@ -9,8 +9,9 @@ Nguyễn Thị Trang
 Nhóm 2:
 Phạm Thế Việt
 Nguyễn Xuân Trường 
-......
-
+Đỗ Mạnh Khoa
+Lê Ngọc Bình
+* PTTK Hệ thống quản lý thư viện
 
 Nhóm 3:
 Nguyễn Quang Tiến
@@ -22,7 +23,7 @@ Lưu Hữu Phước
 Nhóm 4:
 Bùi Đức Hiếu
 Bùi Hoàng Lưu
-Đặng Đức Tùng
+Đặng Đức Tùng                   +
 Trần Ngọc TUyền
 Trần Hoàng Long
 * Website bán hàng
@@ -38,13 +39,13 @@ Hà Viết Tráng
 Nhóm 6:
 Đặng Xuân An
 Hoàng Đức Hiền
-Phan Vũ Hồng Hải
+Phan Vũ Hồng Hải                +
 Nguyễn Anh Quyết
 Nguyễn Đình Đoàn
 * Web bán hàng thực phẩm
 
 Nhóm 7:
-Chu Tiến Khoa *
+Chu Tiến Khoa *                 +
 Trần Văn Thanh
 Nguyễn Đức Duy
 Nguyễn Văn Nghĩa
@@ -52,9 +53,7 @@ Nguyễn Vũ Thế Thư
 * Web bán điện thoại
 
 Nhóm 8:
-Đỗ Mạnh Khoa *
-Lê Ngọc Bình 
---Nguyễn Đình Đoàn ???
+
 * Quản lý thư viện
 
 Nhóm 9:
