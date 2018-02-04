@@ -1,0 +1,293 @@
+Chương 1. Giới thiệu phân tích và thiết kế hệ thống
+
+
+Mục tiêu
+Hiểu căn bản vòng đời phát triển hệ thống và bốn pha trong đó
+Hiểu sự tiến hóa của các phương pháp phát triển hệ thống
+Làm quen với quy trình thống nhất (Unified Process) và các mở rộng của nó
+Làm quen với các vai trò khác nhau trong đội thực hiện dự án
+
+
+Vì sao chúng ta nên quan tâm?
+Bạn có muốn mua một chiếc ô tô với xác suất lái nó mà không gặp vấn đề gì chỉ là 28%?
+
+
+Những thất bại đáng kể trong CNTT gần đây
+Công ty      Năm     Thiệt hại
+Hudson Bay (Canada)  2005  Các vấn đề liên quan đến hệ thống kho vận dẫn đến thiệt hại 33.3 triệu đô-la
+UK Inland Revenue 2004/5 Lỗi phần mềm dẫn đến khoản chi trả quá mức tín dụng thuế 3.45 tỉ đô-la.
+Avis Europe PLC (UK)  2004  Hủy hệ thống hoạch định tài nguyên doanh nghiệp (ERP) sau khi đã đầu tư 54.5 triệu đô-la.
+Ford Motor  2004  Từ bỏ hệ thống bán hàng sau khi đầu tư 400 triệu đô-la chi phí triển khai.
+Hewlett-Packard Co.  2004  Các vấn đề của Hệ thống hoạch định tài nguyên doanh nghiệp dẫn đến thiệt hại 160 triệu đô-la.
+AT&T Wireless  2004   Các vấn đề liên quan đến cập nhật hệ thống quản lý quan hệ khách hàng dẫn đến thiệt hại 100 triệu đô-la.
+
+
+Vòng đời phát triển hệ thống
+
+
+Vòng đời phát triển hệ thống
+Lập kế hoạch -> Phân tích -> Thiết kế -> Triển khai -> Lập kế hoạch -> ...
+
+
+SDLC: Lập kế hoạch
+1. Khởi tạo dự án
+- Xây dựng một đề xuất hệ thống
+- Thực hiện phân tích tính khả thi
+2. Quản lý dự án
+- Xây dựng kế hoạch làm việc
+- Tuyển nhân sự dự án
+- Kiểm soát và điều hành dự án
+  Vì sao chúng ta nên xây dựng hệ thống này?
+
+
+SDLC: Phân tích
+1. Xây dựng chiến lược phân tích
+2. Thu thập yêu cầu
+3. Xây dựng bản đề xuất hệ thống
+  Hệ thống cần làm gì cho chúng ta?
+  Hệ thống sẽ được dùng ở đâu và khi nào?
+
+
+SDLC: Thiết kế
+1. Hoạch định chiến lược thiết kế
+2. Thiết kế kiến trúc và giao diện
+3. Phát triển cơ sở dữ liệu và các đặc tả tệp
+4. Phát triển thiết kế hệ thống
+  Chúng ta sẽ xây dựng hệ thống như thế nào?
+
+
+SDLC: Triển khai
+1. Xây dựng hệ thống
+2. Cài đặt hệ thống
+  - Lập kế hoạch đào tạo người dùng
+3. Thiết lập kế hoạch hỗ trợ
+  Xây dựng hệ thống
+
+
+Tổng hợp vòng đời phát triển hệ thống
++ Mỗi pha bao gồm nhiều bước và dẫn đến các kết quả cụ thể
++ Hệ thống được hình thành thông qua phát triển dần từng bước
++ Hệ thống sau khi được phát triển hoàn thiện có thể quay lại pha lập kế hoạch cho phiên bản tiếp theo, hệ thống tiếp theo hoặc các phát hành bảo trì.
+
+
+Các quy trình và sản phẩm
+Quy trình   Sản phẩm
+Lập kế Hoạch   Kế hoạch dự án
+Phân tích   Đề xuất hệ thống
+Thiết kế   Đặc tả hệ thống
+Triển khai   Hệ thống mới và kế hoạch bảo trì
+
+
+Các phương pháp phát triển hệ thống
+
+
+Các phương pháp phát triển hệ thống
+Một phương pháp là một cách tiếp cận hình thức để triển khai vòng đời phát triển hệ thống
+Các phương pháp được biết đến rộng rãi gồm có:
+- Phát triển thác nước
+- Phát triển song song
+- Mô hình chữ V
+- Phát triển nhanh ứng dụng
+- Phát triển Agile
+
+
+Các nhóm phương pháp
+. Nhấn mạnh cấu trúc
+- Phát triển thác nước
+- Phát triển song song
+. Phát triển nhanh ứng dụng
+- Chia pha
+- Nguyên mẫu
+- Nguyên mẫu thiết kế
+. Phát triển Agile
+- Lập trình mạo hiểm
+
+
+Phương pháp nhấn mạnh cấu trúc 1
+Lập kế hoạch  
+    Phân tích   
+        Thiết kế
+            Triển khai
+                (Hệ thống)
+Phát triển thác nước 
+
+
+Phương pháp nhấn mạnh cấu trúc 2
+Lập kế hoạch
+    Phân tích           Thiết kế   Triển khai
+        Thiết kế        Thiết kế   Triển khai  Triển khai   (Hệ thống)
+                        Thiết kế   Triển khai
+
+
+Phát triển nhanh ứng dụng 1
+Lập kế hoạch
+    Phân tích
+          Phân tích    Thiết kế     Triển khai   (Hệ thống phiên bản 1)
+              Phân tích    Thiết kế    Triển khai   (Hệ thống phiên bản 2)
+                 Phân tích    Thiết kế    Triển khai   (Hệ thống phiên bản 3)
+
+
+Phát triển nhanh ứng dụng 2
+Lập kế hoạch
+    [Phân tích    Thiết kế     Triển khai]   (Nguyên mẫu hệ hống)  Triển khai  (Hệ thống)
+Nguyên mẫu hệ thống
+
+
+Phát triển nhanh ứng dụng 3
+Lập kế hoạch
+    Phân tích
+        [Phân tích    Thiết kế   Triển khai]   (Nguyên mẫu thiết kế)
+             Thiết kế
+                 Triển khai
+                    (Hệ thống)
+Nguyên mẫu thiết kế
+
+
+Phát triển Agile
+Lập kế hoạch
+   [Phân tích   Thiết kế     Triển khai]     (Hệ thống)
+
+
+Lựa chọn phương pháp đúng
+Khả năng hữu ích cho    Thác nước   Song song   Chia pha  Nguyên mẫu    Nguyên mẫu thiết kế     Lập trình mạo hiểm
+Yêu cầu người dùng không rõ ràng      Ít    Ít   Tốt    Tuyệt vời    Tuyệt vời    Tuyệt vời
+Công nghệ mới   Ít    Ít   Tốt    Ít           Tuyện vời    Ít
+Hệ thống phức tạp    Tốt    Tốt   Tốt   Ít    Tuyệt vời     Ít
+Hệ thống đáng tin cậy   Tốt   Tốt   Tốt   Ít    Tuyệt vời    Tốt
+Thời gian ngắn   Ít    Tốt    Tuyệt vời    Tuyệt vời    Tốt    Tuyệt vời
+Tiến độ dự án   Ít    Ít   Tuyệt vời   Tuyệt vời     Tốt    Tốt
+
+
+Phân tích và thiết kế hướng đối tượng
+. Cố gắng cân bằng các điểm nhấn lên dữ liệu và tiến trình
+. Sử dụng ngôn ngữ mô hình hóa thống nhất (UML)
+. Các đặc điểm của OOAD:
+- Dẫn dắt bởi ca sử dụng
+- Kiến trúc trung tâm
+- Lặp và tăng trưởng
+
+
+Quy trình thống nhất
+
+
+Quy trình thống nhất
+. Một phương pháp cụ thể có tham chiếu khi nào sử dụng những kỹ thuật UML như thế nào cho phân tích và thiết kế hướng đối tượng
+. Một quy trình hai chiều bao gồm pha và các tiến trình
+- Các pha mô tả cách hệ thống được phát triển qua thời gian
+- Tác tiến trình là các nhóm tác vụ xuất hiện xuyên suốt vòng đời phát triển hệ thống, nhưng có sự khác biệt về cường độ
+
+
+Quy trình thống nhất
+        Tiến trình kỹ thuật
+Pha   Bắt đầu   Mở rộng     Xây dựng    Chuyển giao
+Mô hình hóa ngiệp vụ
+Yêu cầu
+Phân tích
+Thiết kế
+Triển khai
+Kiểm thử
+Phân phối
+       Tiến trình bổ trợ
+Pha   Bắt đầu   Mở rộng    Xây dựng   Chuyển giao
+Tùy chỉnh và quản lý thay đổi
+Quản lý dự án
+Môi trường
+
+
+Các pha của quy trình thống nhất
+. Bắt đầu
+. Mở rộng
+. Xây dựng
+. Chuyển giao
+
+
+Các tiến trình kỹ thuật
+. Mô hình hóa nghiệp vụ
+. Yêu cầu 
+. Phân tích
+. Thiết kế
+. Triển khai
+. Kiểm thử
+. Phân phối
+
+
+Các tiến trình bổ trợ
+. Quản lý dự án
+. Tùy chỉnh và quản lý thay đổi
+. Môi trường
+. Vận hành và hỗ trợ *
+. Quản lý hạ tầng *
+
+
+Ngôn ngữ mô hình hóa đồng nhất
+
+
+Ngôn ngữ mô hình hóa đồng nhất
+. Cung cấp một bộ từ vựng chung gồm các thuật ngữ hướng đối tượng và các kỹ thuật biểu đồ đủ để mô hình hóa bất kỳ dự án phát triển hệ thống nào từ phân tích tới triển khai
+. Phiên bản 2.0 có 14 biểu đồ chia làm hai nhóm chính
+- Biểu đồ cấu trúc
+- Biểu đồ hành vi
+
+
+Các biểu đồ cấu trúc UML
+. Biểu diễn dữ liệu và các mối quan hệ tĩnh trong một hệ thống thông tin
+- Lớp
+- Đối tượng
+- Gói
+- Phân phối
+- Thành phần
+- Cấu trúc tổng hợp
+
+
+Các biểu đồ hành vi UML
+. Diễn tả các mối quan hệ động giữa các trường hợp hoặc các đối tượng biểu điễn nghiệp vụ của hệ thống thông tin
+- Hoạt động   - Máy trạng thái hành vi
+- Tuần Tự   - Máy trạng thái giao thức
+- Giao tiếp    - Biêu đồ ca sử dụng
+- Tương tác khai quát
+- Đếm giờ
+
+
+Các vai trò và kỹ năng của đội dự án
+
+
+Các kỹ năng của đội dự án
+. Các thành viên của đội dự án là các cá nhân tạo nên thay đổi và tìm cách cải thiện tổ chức của họ
+. Yêu cầu một phạm vi rộng các kỹ năng, gồm có
+- Kỹ thuật
+- Nghiệp vụ
+- Phân tích
+- Cầu nối
+- Quản lý
+v.v.
+
+
+Các vai trò trong đội dự án
+Vai trò       Trách nhiệm
+Phân tích nghiệp vụ     Phân tích các khía cạnh nghiệp vụ chính của hệ thống
+                        Xác định cách hệ thống sẽ cung cấp giá trị kinh tế
+                        Thiết kế các quy trình nghiệp vụ và các chính sách mới
+Phân tích hệ thống      Xác định cách công nghệ có thể cải thiện các quy trình nghiệp vụ
+                        Thiết kế các quy trình nghiệp vụ mới
+                        Thiết kế hệ thống thông tin
+                        Đảm bảo hệ thống mới tương thích với các tiêu chuẩn hệ thống thông tin
+Người phân tích hạ tầng  Đảm bảo hệ thống mới tương thích với các tiêu chuẩn hạ tầng
+                         Xác định các thay đổi đối với hạ tầng được yêu cầu bởi hệ thống mới
+Người phân tích thay đổi  Phát triển và thực hiện một kế hoạch quản lý thay đổi
+                          Phát triển và thực hiện một kế hoạch đào tạo người dùng
+Quản lý dự án           Quản lý đội dự án
+                        Phát triển và theo dõi kế hoạch dự án
+                        Gán các tài nguyên
+                        Giữ vai trò tương tác chính cho dự án
+
+
+Tổng hợp
+. Tất cả các dự án phát triển hệ thống đều đi theo một quy trình khái quát, gọi là vòng đời phát triển hệ thống (SDLC)
+. Phương pháp phát triển hệ thống là cách tiếp cận hình thức triển khai vòng đời phát triển hệ thống
+. Phân tích và thiết kế hệ thống hướng đối tượng (OOAD) sử dụng phương pháp phát triển hệ thống có các đặc điểm cơ bản là: Dẫn dắt bởi ca sử dụng, kiến trúc trung tâm, lặp và tăng trưởng.
+
+
+Tổng hợp
+. Quy trình thống nhất là một là một quy trình phát triểns hai chiều với tập các pha và tập các tiến trình
+. Ngôn ngữ mô hình hóa thống nhất - UML, là một tập tiêu chuẩn các kỹ thuật mô hình hóa bằng biểu đồ
+. Một nhóm dự án cần nhiều kỹ năng khác nhau
