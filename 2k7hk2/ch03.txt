@@ -1,0 +1,226 @@
+Chương 3:
+Quản lý dự án
+
+
+Mục tiêu
+. Làm quen với cách ước lượng
+. Có khả năng tạo kế hoạch thực hiện dự án
+. Hiểu lý do đội dự án sử dụng hộp thời gian
+. Làm quen với cách chọn nhân sự dự án
+. Hiểu vì sao kỹ nghệ phần mềm với máy tính trợ giúp, các quy chuẩn và tài liệu làm tăng hiệu quả dự án.
+. Hiểu cách giảm rủi ro trên một dự án.
+
+
+Quản lý dự án
+. Là khuân phép lập kế hoạch, tổ chức, và quản lý tài nguyên để đem lại kết thúc thành công cho những mục tiêu và mục đích cụ thể của dự án:
+- Chi phí
+- Lịch trình
+- Hoạt động
+
+
+Xác định quy mô dự án
+
+
+Cân bằng Chi phí-Lịch trình-Hoạt động
+Dự án nằm trong phạm vi giới hạn Chi phí-Lịch trình-Hoạt động
+Quản lý dự án bao hàm các hoạt động nhằm cân đối sự đánh đổi giữa 3 thông số chủ chốt của dự án.
+
+
+Ước lượng phân bố thời gian dự án
+Vòng đời phát triển dự án
+Lập kế hoạch 15% - Phân tích 20 % - Thiết kế 35% - Triển khai 30%
+
+
+Phương pháp điểm chức năng
+Ước lượng kích thước hệ thống (Điểm hàm và số dòng lệnh) -> 
+Ước lượng chi phí nhân lực (nhân công-tháng) ->
+Ước lượng thời gian thực hiện (Tháng)
+
+
+Tạo và quản lý kế hoạch làm việc
+
+
+Xây dựng kế hoạch làm việc
+. Một kế hoạch làm việc là một lịch trình động lưu trữ và theo dấu tất cả các nhiệm vụ cần đạt được trong phạm vi dự án
+. Được tạo sau khi người quản lý dự án có nhận định chung về quy mô dự án và lịch trình sơ lược.
+. Kế hoạch làm việc thường là hạng mục chính trong phần mềm quản lý dự án.
+
+
+Ví dụ nhiệm vụ
+Tên nhiệm vụ: Tiến hành phân tích tính khả thi kinh tế
+Ngày bắt đầu: 05-Tháng 1,2010
+Ngày hoàn thành: 19-Tháng 1,2010
+Người thực hiện nhiệm vụ: Mary Smith (Nhà tài trợ dự án)
+Sản phẩm: Phân tích chi phí-lợi ích
+Trạng thái hoàn thành: Đã hoàn thành
+Mức ưu tiên: Cao
+Nhu cầu tài nguyên: Phần mềm bảng tính
+Thời gian ước lượng: 16 giờ
+Thời gian thực tế: 14.5 giờ
+
+
+Xác định công việc
+. Phương pháp từ trên xuống dưới
+- Xác định các nhiệm vụ cao nhất
+- Chia nhỏ những nhiệm vụ đó thành các đơn vị nhỏ hơn
+. Phương pháp
+- Sử dụng danh sách công việc tiêu chuẩn
+
+
+Cấu trúc chia nhỏ công việc 
+Mã số nhiệm vụ    Tên nhiệm vụ    Thời gian (tuần)   Phụ thuộc    Trạng thái
+1  Xác định nhà cung cấp  2   _   Hoàn thành
+2  Rà soát tài liệu đào tạo  6  1  Hoàn thành
+3  So sánh nhà cung cấp   2   2  Đang triển khai
+4  Đàm phán với nhà cung cấp  3  3  Mở
+5  Xây dựng thông tin truyền thông   4  1  Đang triển khai
+6  Phổ biến thông tin   2   5  Mở
+7  Tạo và quản lý khảo sát   4   6   Mở
+  7.1.  Tạo khảo sát ban đầu   1   _   Mở
+  7.2.  Rà soát khảo sát ban đầu  1  7.1  Mở
+    7.2.1. Rà soát bởi giám đốc đào tạo tin học  1  _  Mở
+    7.2.2. Rà soát bởi nhà đầu tư dự án  1  _  Mở
+    7.2.3. Rà soát bởi người đại diện đào tạo  1  _  Mở
+  7.3.  Kiểm tra sơ bộ khảo sát ban đầu  1  7.1. Mở 
+  7.4.  Hiệu chỉnh khảo sát  1  7.2, 7.3  Mở
+  7.5.  Thiết lập danh sách phân phối  0.5  _  Mở
+  7.6.  Gửi bản khảo sát theo danh sách phân phối  0.5  7.4, 7.5  Mở
+  7.7.  Gửi thông điệp tiếp theo   0.5  7.6  Mở
+  7.8.  Thu thập khảo sát đầy đủ     1   7.6  Mở
+8.  Phân tích kết quả và lựa chọn nhà cung cấp  2  4, 7  Mở
+9.  Xây dựng lớp học mới   11   1  Đang thực hiện
+10.  Xây dựng các lựa chọn khóa học   3   8,9  Mở
+
+
+Biểu đồ Gantt
+Mã số   Tên nhiệm vụ   Khoảng Thời gian  Điểm bắt đầu  Kết thúc  Phụ thuộc   Tháng 1  Tháng 2  Tháng 3  Tháng 4  Tháng 5
+1  Xác định nhà cung cấp  2 tuần  Th4, 1/1/08  Th3, 14/1/08    Alan
+2  Rà soát tài liệu đào tạo  6 tuần  Th4 1/1/08  Th3 11/2/08 Barbara
+3  So sánh nhà cung cấp  2 tuần  Th4 12/2/08  Th3 25/2/08  2  Barbara
+4  Đàm phán với nhà cung cấp  3 tuần  Th4 2/26/08  Th3  3/18/08  3  Barbara
+5  Xây dựng thông tin truyền thông  4 tuần  Th4 15/1/08  Th3 11/1/08  1  Alan
+6  Phổ biến thông tin  2 tuần  Th4 12/2/08  Th3 25/2/08  5  Alan 
+7  Tạo và quản lý kháo sát  4 tuần  Th4 26/2/08  Th3 25/3/08  6  Alan
+8  Phân tích kết quả và lựa chọn  2 tuần  Th4 26/3/08  Th3 8/4/08  4,7
+9  Xây dựng phòng học mới  11 tuần  Th4  15/1/08  Th3  1/4/08   1  David
+10  Xây dựng các lựa chọn khóa học  3 tuần  Th4 9/4/08  Th3 29/4/08  8,9
+
+
+Biểu đồ Pert
+. Sử dụng để trình bày sự phụ thuộc giữa các công việc
+. Cho phép biểu diễn những công viẹc trên những tiến trình nghiêm trọng trực quan hơn
+
+
+Quản lý phạm vi
+. Tăng phạm vi không kiểm soát xảy ra khi những yêu cầu mới được thêm vào dự án sau khi phạm vi của dự án ban đầu đã được xác định và "đóng băng".
+                   Giới hạn lỗi phổ biến đối với các kết quả ước lượng tốt
+Pha   Sản phẩm   Chi phí (%)  Thời hạn (%)
+Lập kế hoạch  Yêu cầu hệ thống   400  60
+              Kế hoạch dự án   100  25
+Phân tích  Đề xuất hệ thống  50  15
+Thiết kế  Đặc tả hệ thống  25  10
+
+
+Các bước đóng gói thời gian
+1.  Thiết lập ngày chuyển giao hệ thống
+2.  Ưu tiên những chức năng quan trọng cần phải đưa vào hệ thống
+3.  Xây dựng hạt nhân hệ thống (những chức năng được xếp hạng là quan trọng nhất)
+4.  Tạm gác những chức năng không thể hoàn thành trong giới hạn thời gian
+5.  Chuyển giao hệ thống với những chức năng thiết yếu
+6.  Lặp các bước 3 tới 5 để thực hiện tinh chỉnh và cải tiến
+
+
+Tuyển nhân lực dự án
+
+
+Tuyển nhân lực dự án
+. Xác định số lượng trung bình yêu cầu nhân lực
+- Chia tổng chi phí nhân công-tháng cho lịch trình tối ưu
+- Bổ xung người làm sẽ không rút ngắn lịch trình
+. Tạo một kế hoạch bố trí nhân sự
+- Các vai trò được yêu cầu cho dự án
+- Cơ cấu tổ chức
+
+
+Cơ cấu tổ chức
+Quản lý dự án 
+Trưởng phòng chức năng            Trưởng phòng kỹ thuật
+Người phân tích   Người phân tích   Lập trình viên   Lập trình viên
+
+
+Khuyến khích
+. Thận trọng sử dụng phần thưởng bằng tiền
+. Sử dụng các phần thưởng có sẵn
+- Sự công nhận
+- Thành quả
+- Chính công việc
+- Trách nhiệm
+- Ưu thế
+- Cơ hội học những kỹ năng mới
+
+
+Không khuyến khích
+. Gán thời hạn phi thực tế
+. Phủ nhận những nỗ lực tích cực
+. Tạo ra những sản phẩm chất lượng thấp
+. Nâng cao tất cả mọi người thuộc dự án
+. Ra một quyết định quan trọng khi thiếu thông tin của nhóm
+. Kéo dài điều kiện làm việc kém chất lượng
+
+
+Chiến lược tránh mâu thuẫn
+. Định nghĩa rõ ràng vai trò và kế hoạch dự án
+. Đảm bảo chắc chắn toàn đội hiểu được tầm quan trọng của dự án đối với tổ chức
+. Xây dựng quy trình hoạt động cụ thể và thông báo với tất cả thành viên trong đội
+. Xây dựng kế hoạch dự án
+. Xây dựng lịch trình giao kết trước thời gian
+. Dự đoán những ưu tiên khác và những ảnh hưởng tiềm năng lên dự án
+
+
+Điều phối các hoạt động của dự án
+
+
+Các công cụ CASE
+. Các công cụ máy tính hỗ trợ xây dựng phần mềm (CASE) giúp tự động hóa một vài công đoạn hoặc toàn bộ quá trình xây dựng phần mềm.
+. Không phải viên đạn bạc, nhưng có những lợi thế bao gồm:
+- Giảm chi phí vận hành
+- Cải thiện chất lượng phần mềm
+- Củng cố kỷ luật
+- Một vài đội dự án còn sử dụng CASE để đánh giá mức độ thay đổi dự án.
+
+
+Các quy chuẩn
+Loại quy chuẩn   Ví dụ
+Quy chuẩn tài liệu   Tiêu đề của tất cả tài liệu nên có ngày và tên dự án
+Quy chuẩn mã nguồn   Tất cả các module mã nguồn phải bao gồm một tiêu đề liệt kê lập trình viên, ngày cập nhật cuối cùng, và một mô tả ngắn gọn mục đích của mã nguồn.
+Quy chuẩn quy trình  Báo cáo về dự án vào 3:30 PM thứ 6. Tất cả thay đổi đối với tài liệu yêu cầu cần được thông qua bởi quản lý dự án.
+Quy chuẩn đặc tả yêu cầu  Tên của chương trình sẽ tạo, mô tả mục đích của chương trình.
+Quy chuẩn thiết kế giao diện người dùng    Trật tự tab trên màn hình sẽ di chuyển từ góc trên trái tới góc dưới phải. Thiết lập phím nóng cho tất cả các trường có thể cập nhật được.
+
+
+Hồ sơ
+. Hồ sơ hữu ích xuất hiện từ đầu dự án
+- Hồ sơ chỉ xuất hiện ở thời điểm kết thúc dự án thường không hữu ích lắm.
+. Quyển tài liệu dự án ghi lại những hoạt động điển hình như:
+- Tất cả những giao tiếp bên trong (ví dụ, số phút từ thời gian họp tiến độ)
+- Các quy chuẩn văn bản
+- Thư gửi tới và từ những khách hàng thương mại
+- Sản phẩm chuyển giao từ mỗi nhiệm vụ
+
+
+Quản lý rủi ro
+    Đánh giá rủi ro
+Rủi ro 1:  Phát triển hệ thống này có thể chậm đáng kể bởi vì các thành viên đội dự án chưa lập trình Java trước đây.
+Xác xuất rủi ro:  Xác suất rủi ro cao
+Ảnh hưởng tiềm năng đến dự án:  Rủi ro này có thể làm tăng 50% thời gian hoàn thành công việc lập trình
+Các phương pháp giải quyết rủi ro này:
+Phân bố thời gian và tài nguyên đào tạo Java cho lập trình viên tham gia trước khi thực hiện dự án là rất quan trọng. Chương trình đào tạo phù hợp sẽ giúp giảm thời gian tiếp cận và làm quen với dự án khi bắt đầu lập trình. Thêm nữa, bên cạnh kinh nghiệm Java cần có tối thiểu một vài nhiệm vụ lập trình sớm. Kết quả thực nghiệm sẽ được sử dụng để cung cấp kiến thức thử nghiệm cho đội dự án để (những lập trình viên Java khác) có thể khắc phục được những vấn đề liên quan đến Java
+
+
+Tổng kết
+. Quản lý dự án
+. Xác định quy mô dự án
+. Tạo và quản lý kế hoạch làm việc
+. Tuyển nhân sự dự án
+. Điều phối hoạt động dự án
+
