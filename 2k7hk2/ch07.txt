@@ -1,0 +1,189 @@
+Chương 7:
+Mô hình hóa hành vi
+
+
+Mục tiêu
+. Hiểu các quy định và quy cách đối với các biểu đồ trình tự và biểu đồ giao tiếp và máy trạng thái hành vi.
+. Hiểu các tiến trình được sử dụng để tạo các biểu đồ trình tự và biểu đồ giao tiếp và các máy trạng thái hành vi.
+. Có khả năng tạo các biểu đồ trình tự và các biểu đồ giao tiếp và các máy trạng thái hành vi.
+. Hiểu mối quan hệ giữa các mô hình hành vi và mô hình cấu trúc và các mô hình chức năng.
+
+
+Các ý tưởng chính
+. Các mô hình hành vi mô tả các khía cạnh động bên trong của một hệ thống thông tin có vai trò hỗ trợ các quy trình nghiệp vụ trong một tổ chức.
+. Các mô hình hành vi UML chính là: Các biểu đồ trình tự, các biểu đồ cộng tác, và các biểu đồ trạng thái.
+
+
+Các mô hình hành vi
+
+
+Các mô hình hành vi
+. Các hệ thống có các đặc điểm tĩnh và động
+- Các mô hình cấu trúc mô tả các khía cạnh tĩnh của hệ thống
+- Các mô hình hành vi mô tả các tiến trình động và tương tác của hệ thống và các thành phần của nó.
+. Các mô hình hành vi mô tả cách các lớp trong các mô hình cấu trúc tương tác để hỗ trợ các ca sử dụng.
+
+
+Các biểu đồ tương tác
+
+
+Các thành phần của biểu đồ tương tác
+. Các đối tượng
+Một thực bản của một lớp
+. Các thao tác
+Các hành vi của một thực bản của một lớp
+. Các thông điệp
+Thông tin được gửi tới các đối tượng để yêu cầu các đối tượng thực hiện một trong các hành vi của chúng.
+
+
+Các biểu đồ trình tự
+. Minh họa các đối tượng tham gia vào một ca sử dụng
+. Biểu diễn các thông điệp được truyền giữa các đối tượng cho một ca sử dụng cụ thể.
+
+
+Cú pháp biểu đồ trình tự
+Một tác nhân:
+. Là một người hoặc hệ thống nhận lợi ích từ và nằm ngoại phạm vi hệ thống.
+. Tham gia vào một trình tự bằng cách gửi và/hoặc nhận các thông điệp.
+. Được đặt hàng ngang ở phía trên biểu đồ.
+. Được biểu diễn bằng hình người que (mặc định) hoặc, nếu tác nhân phi nhân tham gia, biểu diễn như một hình chữ nhật với ký hiệu <<actor>> bên trong (lựa chọn khác).     
+Một tác nhân/vai trò |<<actor>            |
+                     |Một tác nhân/vai trò|
+Một đối tượng:
+. Tham gia vào một trình tự bằng cách gửi và/hoặc nhận các thông điệp
+. Được đặt theo hàng phía trên của biểu đồ
+    Một đối tượng:Một lớp
+Một đường sống:
+. Biểu diễn sự sống của một đối tượng trong một trình tự
+. Chứa một ký hiệu X ở điểm mà lớp ngừng tương tác.
+Một dấu hiệu thực hiện lệnh:
+. Là một hình chữ nhật hẹp dài được đặt trên đường sống.
+. Đánh dấu khi một đối tượng đang gửi hoặc nhận thông điệp.
+
+
+Cú pháp biểu đồ trình tự (tiếp tục)
+Một thông điệp:
+. Truyền tải thông tin từ một đối tượng sang một đối tượng khâc
+. Một lệnh gọi hàm được gán nhãn với thông điệp đang được gửi và một mũi tên liền, trong khi một trả về được gán nhãn với giá trị được trả về và được biểu diễn bằng mũi tên nét đứt.
+Điều kiện bảo vệ:
+. Biểu diễn một điều kiện phải được đáp ứng để thông điệp có thể được gửi đi [Điều kiện bảo vệ]: một Thông điệp()
+Biểu diễn hủy đối tượng:
+. Dấu X được đặt ở cuối đường sống của một đối tượng để thể hiện rằng đối tượng đang ngừng tồn tại     X
+Một khung:
+. Biểu diễn ngữ cảnh của biểu đồ trình tự.
+
+
+Ví dụ biểu đồ trình tự
+sd Ca sử dụng tạo lịch hẹn
+một Bệnh nhân    Một người tiếp nhận   Bệnh nhân:Danh sách bệnh nhân   Hóa đơn chưa thanh toán:Danh sách hóa đơn   Lịch hẹn:Danh sách lịch hẹn   Một lịch hẹn:Lịch hẹn
+Bệnh nhân --yêu cầu lịch hẹn(tên, địa chỉ) --> Người tiếp nhận
+Người tiếp nhận --Tìm kiếm bệnh nhân()-->Danh sách bệnh nhân
+Người tiếp nhận --[nếu bệnh nhân tồn tại]Tìm kiếm hóa đơn-->Hóa đơn chưa thanh toán:Danh sách hóa đơn
+Người tiếp nhận --TạoMớiHủyThayĐổiLịchHẹn()--> Bệnh nhân
+Người tiếp nhận --Thời gian hẹn() --> Bệnh nhân
+Người tiếp nhận --Ánh xạ lịch hẹn()-->Danh sách lịch hẹn
+Người tiếp nhận --Tạo lịch hẹn-->Một lịch hẹn
+
+
+Các bước xây dựng các biểu đồ trình tự
+1. Thiết lập ngữ cảnh
+2. Xác định các đối tượng sẽ tham gia
+3. Thiết lập đường sống cho mỗi đối tượng
+4. Đặt các thông điệp từ đỉnh đến đáy của biểu đồ dựa trên trình tự theo đó các thông điệp được gửi.
+5. Thêm dấu hiệu thực hiện lệnh cho mỗi đường sống của đối tượng.
+6. Kiểm tra biểu đồ trình tự
+
+
+Các máy trạng thái hành vi
+
+
+Các máy trạng thái hành vi
+. Một mô hình động biểu diễn các trạng thái khác nhau mà một đối tượng riêng lẻ trải qua trong suốt thời gian sống của nó theo phản hồi các sự kiện, đi kèm với những phản ứng và hành động của nó.
+. Thông thường không được sử dụng cho tất cả các đối tượng
+- Chỉ sử dụng cho các đối tượng phức tạp
+
+
+Các thành phần của máy trạng thái
+. Các trạng thái
+Các giá trị của các thuộc tính của đối tượng tại một thời điểm
+. Các sự kiện
+thay đổi giá trị của các thuộc tính của đối tượng
+. Các bước chuyển
+Sự biến chuyển của một đối tượng từ một trạng thái sang trạng thái khác
+. Các hành động
+đơn vị, các quy trình không phân tách
+. Các hoạt động
+không đơn vị, các tiến trình có thể phân tách
+
+
+Cú pháp máy trạng thái hành vi
+Một trạng thái:
+. Được biểu diễn bằng một hình chữ nhật với góc tròn
+. Có tên biểu diễn trạng thái của một đối tượng
+Một trạng thái bắt đầu:
+. Được biểu diễn bằng một hình tròn nhỏ, tô đậm
+. Biểu diễn điểm mà đối tượng bắt đầu tồn tại
+Một trạng thái kết thúc:
+. Được biểu diễn như một hình tròn bao quanh một hình tròn tô đậm.
+. Biểu diễn sự hoàn thành của một hoạt động
+Một sự kiện:
+. Là một sự xuất hiện đáng chú ý kích hoạt sự thay đổi trạng thái.
+. Khi một điều kiện cụ thể được đáp ứng, sự tiếp nhận tường minh tín hiệu từ một đối tượng đến đối tượng khác, hoặc sự kết thúc một khoảng thời gian.
+. Được sử dụng để gán nhãn một bước chuyển.
+Một bước chuyển:
+. Thể hiện một đối tượng từ trạng thái đầu tiên sẽ chuyển đến trạng thái thứ hai.
+. Được kích hoạt bởi sự xuất hiện của sự kiện được gán trên nhãn bước chuyển.
+. Được biểu diễn như một mũi tên liền từ một trạng thái này sang trạng thái khác, được gán nhãn bằng tên sự kiện.
+Một khung:
+. Biểu diễn ngữ cảnh của máy trạng thái hành vi.
+
+
+Ví dụ máy trạng thái hành vi
+(bắt đầu)--Vào bệnh viện-->(Đang vào)
+(Đang vào)--Đăng ký-->(Được tiếp nhận)
+(Được tiếp nhận)--[Chuẩn đoán=Khỏe mạnh]-->(Xuất viện) 
+(Được tiếp nhận)--[Chuẩn đoán=Không khỏe mạnh]-->(Được theo dõi)
+(Được theo dõi)--[Chuẩn đoán=Khỏe mạnh] -->(Xuất viện)
+(Xuất viện)--[>2 tuần]-->(Kết thúc)
+
+
+Các bước xây dựng một máy trạng thái hành vi
+1. Thiết lập ngữ cảnh
+2. Xác định các trạng thái bắt đầu, kết thúc, và trạng thái ổn định của đối tượng.
+3. Xác định trật tự mà theo đó đối tượng sẽ chuyển đến trạng thái ổn định.
+4. Xác định các sự kiện, các hành động, và các điều kiện bảo vệ gắn với các bước chuyển.
+5. Kiểm tra máy trạng thái hành vi
+
+
+Phân tích CRUD
+
+
+Phân tích CRUD
+. Gán nhãn tương tác đối tượng theo bốn cách
+- Tạo
+- Đọc
+- Cập nhật
+- Xóa
+. Biểu diễn dạng ma trận của các đối tượng và các tương tác
+. Hữu ích nhất như một biểu diễn trên quy mô hệ thống
+
+
+Ví dụ ma trận CRUD
+Người tiếp nhận     RU  Danh sách bệnh nhân
+Người tiếp nhận     CRUD bệnh nhân
+Người tiếp nhận     R Hóa đơn chưa thanh toán
+Người tiếp nhận     RU Các buổi hẹn
+Người tiếp nhận     CRUD buổi hẹn
+Danh sách bệnh nhân   R   Bệnh nhân
+Bệnh nhân
+Hóa đơn chưa trả
+Các buổi hẹn       R  Buổi hẹn
+Lịch hẹn
+
+
+Tổng kết
+. Các mô hình hành vi
+. Các biểu đồ tương tác
+. Các máy trạng thái hành vi
+. Phân tích CRUD
+
