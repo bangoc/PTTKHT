@@ -1,0 +1,233 @@
+Chương 8:
+Chuyển sang thiết kế
+
+
+Các mục tiêu
+. Hiểu sự kiểm tra và hợp thức các mô hình phân tích.
+. Hiểu sự chuyển tiếp từ phân tích sang thiết kế.
+. Hiểu cách sử dụng các kỹ thuật phân tích, phân mảnh, và phân tầng.
+. Có khả năng tạo các biểu đồ gói.
+. Làm quen với các lựa chọn thiết kế cá nhân, đóng gói và gia công.
+. Có khả năng tạo ma trận tương đương.
+
+
+Các ý tưởng chính
+. Mục đích của pha phân tích là tìm hiểu nhu cầu nghiệp vụ. Mục đích của pha thiết kế là tìm cách cung cấp nó.
+. Các bước trong cả hai pha phân tích và thiết kế có quan hệ qua lại mật thiết và có thể yêu cầu nhiều bước "tiến và lui". 
+
+
+Tránh các lỗi thiết kế cổ điển
+. Giảm thời gian thiết kế
+. Biến dạng chức năng
+. Dấu hiệu viên đạn bạc
+. Thay đổi công cụ ở giữa dự án
+
+
+Kiểm tra và hợp thức (V&V) các mô hình phân tích
+
+
+Xét tổng thể
+. Kiểm tra chéo các mô hình và biểu đồ được tạo ra trong quá trình phân tích
+- Được thực hiện bởi các đội gồm người phân tích, người thiết kế và khách hàng.
+- Các mục đích chính:
++ Kiểm tra sự đúng đắn của các mô hình
++ Phát hiện lỗi và thiếu sót
+. Nguy hiểm tiềm năng là người phân tích bị phạt vì những lỗi bị phát hiện.
+
+
+Kiểm tra và hợp thức mô hình chức năng
+1. Các sự kiện trong các đặc tả ca sử dụng cần ánh xạ với các hoạt động trong biểu đồ hoạt động.
+2. Các nút đối tượng trong một biểu đồ hoạt động phải được nhắc đến trong các đặc tả ca sử dụng.
+3.Trật tự tuần tự trong các ca sử dụng phải khớp với trật tự trong biểu đồ hoạt động.
+4. Phải có sự tương quan một-một giữa các ca sử dụng trong biểu đồ ca sử dụng và các đặc tả ca sử dụng.
+
+
+Kiểm tra và hợp thức các mô hình chức năng (tiếp tục)
+5. Tất cả các tác nhân được liệt kê trong một đặc tả ca sử dụng phải được biểu diễn trên biểu đồ ca sử dụng.
+6. Thêm các bên liên quan được liệt kê trong đặc tả ca sử dụng như các tác nhân trong biểu đồ ca sử dụng.
+7. Các mối quan hệ được liệt kê trong một đặc tả ca sử dụng phải được biểu diễn trên một biểu đồ ca sử dụng.
+
+
+Kiểm tra và hợp thức mô hình cấu trúc
+1. Tất cả các thẻ CRC phải được gắn với một lớp trên biểu đồ lớp.
+2. Các trách nhiệm được liệt kê trên thẻ CRC phải là các thao tác trong một lớp trên một biểu đồ lớp.
+3. Các lớp cộng tác trên thẻ CRC khẳng định một vài kiểu liên quan trên biểu đồ lớp.
+4. Các thuộc tính được liệt kê trên các thẻ CRC phải là các thuộc tính trong một lớp trên biểu đồ lớp.
+
+
+Kiểm tra và hợp thức mô hình cấu trúc (tiếp tục)
+5. Các thuộc tính có kiểu là một lớp khác khẳng định mối quan hệ giữa các lớp.
+6. Các mối quan hệ trên các thẻ CRC phải được thể hiện trên biểu đồ lớp.
+7. Chỉ sử dụng các lớp liên kết nếu các mối liên quan chỉ có các thuộc tính duy nhất không có trong lớp nào.
+
+
+Kiểm tra và hợp thức mô hình hành vi
+1. Các tác nhân & các đối tượng trên các biểu đồ trình tự phải được đưa vào các biểu đồ giao tiếp.
+2. Các thông điệp trên biểu đồ trình tự yêu cầu mối quan hệ trên biểu đồ giao tiếp.
+3. Tất cả thông điệp trên một biểu đồ tuần tự phải xuất hiện như một thông điệp trên một mối liên quan trong biểu đồ giao tiếp tương ứng.
+4. Các điều kiện bảo vệ các thông điệp trong các biểu đồ tuần tự yêu câu các điều kiện bảo vệ tương đương trên các biểu đồ giao tiếp tương ứng.
+
+
+Kiểm tra và hợp thức mô hình cấu trúc (tiếp tục)
+5. Số thứ tự trên các nhãn thông điệp trong các biểu đồ giao tiếp phải tương ứng với trật tự từ trên-xuống dưới của các thông điệp được gửi trong biểu đồ tuần tự.
+6. Các bước chuyển trạng thái phải liên kết với một thông điệp trên biểu đồ trình tự và giao tiếp.
+7. Tất cả các giá trị trong một ma trận CRUD khẳng định một thông điệp được gửi giữa một tác nhân hoặc đối tượng với một tác nhân hoặc đối tượng khác.
+
+
+Phát triển các mô hình phân tích vào trong các mô hình thiết kế
+
+
+Phân tích
+. Tạo các mô-đun ghi nhận sự tương đồng và khác biệt giữa các đơn vị được quan tâm
+. Các lớp mới
+- Khái quát hóa
+- Tổng hợp
+. Trừu tượng hóa
+. Làm mịn
+
+
+Phân mảnh và sự hợp tác
+. Tạo "các hệ thống con" hoặc các đơn vị lớn hơn
+. Gom các đơn vị tương tác
+. Có thể có sự hợp tác giữa các đơn vị hoặc các mảnh
+. Càng nhiều thông điệp hoặc ràng buộc giữa các đối tượng, càng nhiều khả năng các đối tượng ở trong cùng mảnh.
+
+
+Các tầng
+. Tính đến các thông tin môi trường hệ thống để giúp triển khai mô hình phân tích.
+. Kiến trúc mô hình-khung nhìn-điều khiển (MVC)
+. Tách biệt lô-gic ứng dụng khỏi lô-gic giao diện người dùng.
+
+
+5 tầng
+. Nền tảng
+. Lĩnh vực ứng dụng
+. Quản lý dữ liệu
+. Tương tác người-máy
+. Kiến trúc vật lý
+
+
+Các gói và các biểu đồ gói
+
+
+Gói
+. Một cấu trúc khái quát gom các đơn vị cùng nhau 
+. Được sử dụng để giảm tính phức tạp của các mô hình.
+. Biểu đồ gói chỉ hiển thị các gói
+Một gói:
+. Là một sự gom nhóm lô-gic của các thành phần UML
+. Được sử dụng để đơn giản hóa biểu đồ UML bằng cách gom nhóm những thành phần liên quan vào một đơn vị bậc cao hơn.
+Mối quan hệ liên quan:
+. Biểu diễn mối quan hệ giữa các gói, ví dụ, nếu một gói bị thay đổi, thì gói phụ thuộc cũng có thể cần thay đổi theo.
+. Có mũi tên được vẽ từ gói phụ thuộc về phía gói bị phụ thuộc.
+
+
+Sơ đồ gói cho 5 tầng
+Gói tương tác người-máy --Phụ thuộc --> Gói nền tảng
+Gói tương tác người-máy --Phụ thuộc --> Gói Lĩnh vực
+Gói kiến trúc vật lý --Phụ thuộc--> Gói lĩnh vực
+Gói kiến trúc vật lý <--Phụ thuộc--> Gói quản lý dữ liệu
+Gói kiến trúc vật lý --Phụ thuộc--> Gói nền tảng
+Gói quản lý dữ liệu --Phụ thuộc--> Gói lĩnh vực
+Gói Quản lý dữ liệu --Phụ thuộc--> Gói nền tảng
+Gói lĩnh vực --Phụ thuộc -> Gói nền tảng
+
+
+Xây dựng các biểu đồ gói
+1. Thiết lập ngữ cảnh
+2. Gom các lớp theo cụm dựa trên các mối quan hệ chia sẻ
+3. Mô hình hóa các lớp được chia cụm như các gói
+4. Xác định các mối quan hệ phụ thuộc giữa các gói
+5. Thiết lập các mối quan hệ phụ thuộc giữa các gói.
+
+
+Các chiến lược thiết kế
+
+
+Phát triển cá nhân
+. Cho phép đáp ứng những yêu cầu chi tiết cao.
+. Cho phép sự linh động và sáng tạo trong giải quyết vấn đề.
+. Thay đổi các bộ phận dễ dàng hơn
+. Xây dựng kỹ năng cá nhân
+. Có thể tiêu tốn tài nguyên công ty
+. Có thể thêm rủi ro đáng kể
+
+
+Gói phần mềm sẵn có
+. Phần mềm đã được viết
+. Có thể hiệu quả hơn
+. Có thể được kiểm tra và minh chứng tốt hơn
+. Có phạm vi từ một bộ phận tới công cụ hoặc cả hệ thống hoàn thiện.
+. Phải chấp nhận chức năng như được cung cấp.
+. Có thể yêu cầu thay đổi cách công ty vận hành.
+. Có thể yêu cầu tùy chỉnh đáng kể hoặc các giải pháp "đường chánh".
+
+
+Tích hợp hệ thống
+. Quá trình kết hợp các gói, hệ thống cũ, và phần mềm mới
+. Thách thức chủ yếu là tích hợp dữ liệu
+. Viết dữ liệu trong cùng định dạng
+. Kiểm tra các định dạng dữ liệu đang tồn tại
+. Phát triển các "đối tượng đóng gói"
+
+
+Gia công phần mềm
+. Thuê một công ty ngoài để xây dựng hệ thống
+. Có thể có nhiều kỹ năng hơn
+. Có thể mở rộng các tài nguyên hiện có
+. Không bao giờ thuê gia công những gì bạn không hiểu
+. Lựa chọn cẩn thận nhà cung cấp
+. Chuẩn bị cẩn thận hợp đồng và phương thức thanh toán.
+
+
+Lựa chọn một chiến lược thiết kế
+. Nhu cầu nghiệp vụ
+. Kinh nghiệm hiện có
+. Kỹ năng dự án
+. Quản lý dự án
+. Quỹ thời gian
+
+
+Lựa chọn một chiến lược thiết kế
+Nhu cầu nghiệp vụ
++ Sử dụng chiến lược phát triển cá nhân khi: Nhu cầu nghiệp vụ là duy nhất
++ Sử dụng gói hệ thống sẵn có khi: Nhu cầu nghiệp vụ là phổ thông
++ Thuê gia công: Khi nhu cầu nghiệp vụ không phải là thiết yếu đối với kinh doanh
+Kinh nghiệm sẵn có
++ Sử dụng chiến lược phát triển cá nhân khi: Có sẵn kinh nghiệm chức năng và kỹ thuật
++ Sủ dụng gói hệ thống sẵn có khi: Có sẵn kinh nghiệm chức năng
++ Sử dụng gia công khi: Không có sẵn kinh nghiệm chức năng hoặc kỹ thuật
+Các kỹ năng dự án:
++ Sử dụng chiến lược phát triển cá nhân khi: Có mong muốn xây dựng các kỹ năng 
++ Sử dụng hệ thống đóng gói sẵn: Các kỹ năng không có vai trò chiến lược
++ Thuê gia công khi: Quyết định gia công không phải là một quyết định chiến lược
+Quản lý dự án:
++ Sử dụng chiến lược phát triển cá nhân khi: Dự án có một người quản trị dự án giàu kinh nghiệm và có phương pháp đã được kiểm nghiệm.
++ Sử dụng hệ thống phần mềm đóng gói: Dự án có một người quản lý có khả năng điều phối các nhà cung cấp
++ Sử dụng gia công phần mềm khi: Dự án có một người quản lý giàu kinh nghiệm ở tầm công ty phù hợp với phạm vi giao kết gia công.
+Khung thời gian:
++ Sử dụng chiến lược phát triển cá nhân khi: Khung thời gian là linh động
++ Sử dụng hệ thống phần mềm đóng gói sẵn khi: Khung thời gian ngắn
++ Gia công phần mềm khi: Khung thời gian ngắn hoặc linh động
+
+
+Phát triển thiết kế thực
+
+
+Ma trận tương đương
+. Tổng hợp một vài phân tích tính khả thi vào bảng
+. Kiểm tra lại tính khả thi kỹ thuật, kinh tế và tổ chức.
+
+
+Yêu cầu các đề xuất
+. Mô tả hệ thống bạn đề xuất xây dựng
+. Nhà cung cấp, lập trình viên, nhà cung cấp dịch vụ phản hồi đề xuất kèm với cách họ sẽ giải quyết các nhu cầu cũng như thông báo về các yêu cầu chi phí và thời gian.
+
+
+Tổng hợp
+. Kiểm duyệt và thông qua các mô hình phân tích
+. Áp dụng các mô hình phân tích vào các mô hình thiết kế
+. Gói và biểu đồ gói
+. Chiến lược thiết kế
+. Phát triển thiết kế thực
+
