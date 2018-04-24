@@ -4,8 +4,8 @@ Thiết kế lớp và phương thức
 
 Các mục tiêu
 . Làm quen với ghép nối, gắn kết, và đồng sinh
-. Có khả năng tạo lập, tái cấu trúc, và tối ưu các thiết kế đối tượng.
-. Có khả năng xác định sự tái sử dụng các lớp đã được định nghĩa, các thư viện, các nền tảng và các thành phần.
+. Có khả năng tạo lập, tái cấu trúc, và tối ưu hóa các thiết kế đối tượng.
+. Có khả năng xác định sự tái sử dụng các lớp đã có, các thư viện, các nền tảng và các thành phần.
 . Có khả năng tạo lập các ràng buộc và các thỏa thuận.
 . Có khả năng tạo đặc tả phương thức.
 
@@ -23,15 +23,15 @@ Các thành phần của phân tích và thiết kế hướng đối tượng
 
 
 Đóng gói & ẩn thông tin
-. Ẩn biểu diễn (nội dung) của đối tượng từ góc nhìn bên ngoài
+. Ẩn biểu diễn (nội dung) của đối tượng từ khung nhìn bên ngoài
 . Các giao tiếp chỉ thông qua các phương thức của đối tượng
 . Chìa khóa để tái sử dụng
 
 
 Đa hình & kết buộc động
 . Cùng một thông điệp kích hoạt các phương thức khác nhau trong các đối tượng khác nhau
-. Kết buộc động có nghĩa là phương thức cụ thể được lựa chọn ở thời điểm chạy chương trình
-. Kết buộc động được triển khai chuyên biệt cho từng ngôn ngữ
+. Kết buộc động có nghĩa là phương thức cụ thể được lựa chọn tại thời gian chạy chương trình
+. Cài đặt kết buộc động là chuyên biệt theo ngôn ngữ
 . Cần rất cẩn thận đối với lỗi ở thời gian chạy
 . Cần đảm bảo tính nhất quán ngữ nghĩa
 
@@ -41,10 +41,12 @@ Ví dụ đa hình
 |----|               |--------------|
 ------               | +computePay()|
                      ----------------
+
 [Nhân viên theo giờ] ---🢖 [  Nhân viên  ]
 |------------------|     |--------------|
 | +computePay()    |     |+computePay() |
 --------------------     ----------------
+
 [Nhân viên nhận lương] ---🢖 [  Nhân viên  ]
 |--------------------|     |--------------|
 | +computePay()      |     |+computePay() |
@@ -54,16 +56,19 @@ Ví dụ đa hình
 Kế thừa
 . Đơn kế thừa -- một lớp cha
 . Đa kế thừa -- nhiều lớp cha
-. Mâu thuẫn định nghĩa lại và kế thừa
-. Hầu hết các mâu thuẫn kế thừa là do phân lớp kém
+. Định nghĩa lại và mâu thuẫn kế thừa
+. Hầu hết các mâu thuẫn kế thừa là do phân lớp kém chất lượng
+
 [  Nhân viên  ] ---🢖 [   Người     ]
 |-------------|     |--------------|
 |+computePay()|     |+computePay() |
 ---------------     ----------------
+
 [Nhân viên được trả lương] ---🢖 [   Nhân viên  ]
 |------------------------|     |--------------|
 | +computePay()          |     |+computePay() |
 --------------------------     ----------------
+
 [    Bác sỹ      ]---🢖 [Nhân viên được trả lương]
 |--------------|    |------------------------|
 |+computePay() |    | +computePay()          |
@@ -73,15 +78,15 @@ Kế thừa
 Các quy tắc của Rumbaugh
 1. Không nên định nghĩa lại các thao tác vấn tin
 2. Các phương thức định nghĩa lại các phương thức được kế thừa chỉ nên giới hạn ý nghĩa của các phương thức được thừa kế
-3. Ngữ nghĩa bên dưới của phương thức được kế thừa không nên bị thay đổi
-4. Ký hiệu (Danh sách tham số) của phương thức được kế thừa không nên bị thay đổi.
+3. Ngữ nghĩa cơ bản của phương thức được kế thừa nên giữ không bao giờ thay đổi
+4. Ký hiệu (danh sách tham số) của phương thức được kế thừa nên giữ không bao giờ thay đổi.
 
 
 Tiêu chuẩn thiết kế
 
 
 Ghép nối
-. Sự phụ thuộc qua lại giữa các mô-đun
+. Sự phụ thuộc giữa các mô-đun
 . Ghép nối tương tác thông qua truyền thông điệp
 
 
@@ -96,10 +101,10 @@ Các thông điệp chỉ nên được gửi bởi một đối tượng:
 
 Các kiểu ghép nối tương tác
 Mức độ        Loại    Mô tả
-Tốt    Không có ghép nối trực tiếp      Các phương thức không liên quan tới nhau và không gọi lẫn nhau
- |     Dữ liệu     Phương thức gọi truyền một biến tới phương thức bị gọi. Nếu biến là tổng hợp (ví dụ, một đối tượng), toàn bộ đối tượng được sử dụng bởi phương thức được gọi để thực hiện chức năng của nó.
+Tốt    Không có ghép nối trực tiếp      Các phương thức không liên quan tới nhau, có nghĩa là, không gọi lẫn nhau
+ |     Dữ liệu     Phương thức gọi truyền một biến tới phương thức bị gọi. Nếu biến là tổng hợp (ví dụ, một đối tượng), toàn bộ đối tượng được sử dụng bởi phương thức bị gọi để thực hiện chức năng của nó.
  |     Đóng dấu     Phương thức gọi truyền một biến tổng hợp (ví dụ, một đối tượng) tới phương thức bị gọi, nhưng phương thức bị gọi chỉ sử dụng một phần của đối tượng để thực hiện chức năng của nó.
- |     Điều khiển     Phương thức gọi truyền biến điều khiển có giá trị sẽ điều khiển việc thực hiện phương thức được gọi.
+ |     Điều khiển     Phương thức gọi truyền một biến điều khiển có giá trị sẽ điều khiển việc thực hiện phương thức bị gọi.
  |     Chung hoặc toàn cục     Các phương thức tham chiếu đến một "vùng dữ liệu toàn cục" nằm bên ngoài các đối tượng riêng lẻ.
 Không tốt    Nội dung hoặc dấu hiệu sai sót     Một phương thức của một đối tượng tham chiếu đến chi tiết bên trong (phần ẩn) của đối tượng khác. Điều này phá vỡ nguyên tắc đóng gói và ẩn dữ liệu. Mặc dù vậy, C++ cho phép điều này thông qua việc sử dụng cơ chế "bạn".
 Nguồn: Các kiểu này được tham khảo từ Meilir Page-Jones, The Practical Guide to Structured Systems Design, 2nd (Englewood Cliffs, N): Yardon Press, 1988; và Glenford Myers, Composite/Structured Design (New York Van Nostrand Reinhold, 1978).
@@ -113,47 +118,47 @@ Sự gắn kết
 
 Các loại gắn kết phương thức
 Mức độ         Loại       Mô tả
-Tốt    Chức năng   Một phương thức thực hiện một nhiệm vụ gắn với một vấn đề đơn lẻ (ví dụ, tính điểm GPA hiện tại).
- |     Tuần tự        Phương thức kết hợp hai hàm, theo đó đầu ra từ hàm đầu tiên được sử dụng làm đầu vào của hàm thứ hai (ví dụ, định dạng và kiểm tra GPA hiện tại).
- |     Giao tiếp   Phương thức kết hợp hai hàm sử dụng cùng các thưộc tính để thực hiện (ví dụ, tính điểm GPA hiện tại và điểm GPA tích lũy)
+Tốt    Chức năng   Một phương thức thực hiện một tác vụ gắn với một vấn đề đơn lẻ (ví dụ, tính điểm GPA hiện tại).
+ |     Tuần tự        Phương thức kết hợp hai hàm, trong đó đầu ra từ hàm đầu tiên được sử dụng làm đầu vào của hàm thứ hai (ví dụ, định dạng và kiểm tra GPA hiện tại).
+ |     Giao tiếp   Phương thức kết hợp hai hàm sử dụng cùng nhóm thưộc tính để hoạt động (ví dụ, tính điểm GPA hiện tại và điểm GPA tích lũy)
  |     Quy trình   Phương thức hỗ trợ nhiều hàm liên kết lỏng lẻo. Ví dụ, phương thức có thể tính GPA của sinh viên, in bản ghi sinh viên, tính GPA tích lũy, và in GPA tích lũy.
  |     Tạm thời hoặc cổ điển    Phương thức hỗ trợ đồng thời nhiều hàm liên quan (ví dụ, khởi tạo tất cả thuộc tính).
  |     Lô-gic       Phương thức hỗ trợ nhiều hàm liên quan, nhưng lựa chọn hàm cụ thể được thực hiện dựa trên một biến điều khiển được truyền đến phương thức. Ví dụ, phương thức được gọi có thể mở một tài khoản kiểm tra, mở một tài khoản tiết kiệm, hoặc tính khoản vay, phụ thuộc vào thông điệp được gửi bởi phương thức gọi.
-Không tốt      Trùng hợp    Không thể xác định mục đích của phương thức hoặc nó thực hiện nhiều chức năng không liên quan tới nhau. Ví dụ, phương thức có thể cập nhật các bản ghi khách hàng, tính thanh toán khoản bay, in báo cáo ngoại lệ, và phân tích cấu trúc giá của đối thủ cạnh tranh.
+Không tốt      Trùng khớp ngẫu nhiên    Không thể xác định được mục đích của phương thức hoặc nó thực hiện nhiều chức năng không liên quan tới nhau. Ví dụ, phương thức có thể cập nhật các bản ghi khách hàng, tính thanh toán khoản vay, in báo cáo ngoại lệ, và phân tích cấu trúc giá của đối thủ cạnh tranh.
 Nguồn: Những kiểu này được tham khảo từ Page-Jones, The Practical Guide to Structured Systems, and Myers, Composite/Structured Design.
 
 
 Các loại gắn kết lớp
 Mức độ      Loại     Mô tả
-Tốt     Lý tưởng    Lớp không có bất kỳ sự pha trộn gắn kết nào.
- |      Pha trộn vai trò       Lớp có một hoặc nhiều thuộc tính kết nối với các đối tượng thuộc lớp với các đối tượng khác trên cùng tầng (ví dụ, tầng vấn đề lĩnh vực), nhưng (các) thuộc tính không có gì liên quan đến ngữ nghĩa cơ bản của lớp.
- |     Pha trộn lĩnh vực       Lớp có một hoặc nhiều thuộc tính kết nối các đối tượng của lớp với các đối tượng khác trên một tầng khác. Như vậy, chúng không có gì liên quan đến ngữ nghĩa cơ bản của những thứ mà lớp giữ vai trò đại diện. Trong những trường hợp này, các thuộc tính không phù hợp thuộc một lớp khác nằm trên một trong những tầng khác. Ví dụ, thuộc tính cổng nằm trong một lớp vấn đề lĩnh vực cần phải nằm trong một lớp kiến trúc hệ thống kết nối với lớp lĩnh vực.
-Tệ nhất    Pha trộn thực bản    Lớp biểu diễn hai loại đối tượng khác nhau. Lớp cần phải được phân tích thành hai lớp tách biệt. Thông thường, các thực bản khác nhau chỉ sử dụng một phần của định nghĩa đầy đủ của lớp.
+Tốt     Lý tưởng    Lớp không có bất kỳ sự gắn kết pha trộn nào.
+ |      Pha trộn vai trò       Lớp có một hoặc nhiều thuộc tính kết nối với các đối tượng thuộc lớp với các đối tượng khác trên cùng tầng (ví dụ, tầng vấn đề lĩnh vực), nhưng (các) thuộc tính không có gì liên quan đến ngữ nghĩa cơ bản của lớp đó.
+ |     Pha trộn lĩnh vực       Lớp có một hoặc nhiều thuộc tính kết nối các đối tượng của lớp với các đối tượng khác trên một tầng khác. Như vậy, chúng không có gì liên quan đến ngữ nghĩa cơ bản của những thứ mà lớp đó đang đại diện. Trong những trường hợp này, các thuộc tính không phù hợp thuộc một lớp khác nằm trên một trong những tầng khác. Ví dụ, thuộc tính cổng nằm trong một lớp lĩnh vực vấn đề cần phải nằm trong một lớp thuộc tầng kiến trúc hệ thống được kết nối với lớp lĩnh vực vấn đề đó.
+Tệ nhất    Pha trộn thực bản    Lớp biểu diễn hai loại đối tượng khác nhau. Lớp cần phải được phân tách thành hai lớp riêng biệt. Thông thường, các thực bản khác nhau chỉ sử dụng một phần trong định nghĩa đầy đủ của lớp đó.
 Nguồn: Page-Jones, Fundamentals of Object-Oriented Design in UML
 
 
 Cùng sinh
-. Thay đổi một mô-đun làm phát sinh nhu cầu thay đổi một mô-đun khác
-- Tối thiểu hóa cùng sinh tổng thể
+. Làm phát sinh nhu cầu thay đổi một mô-đun khác như hệ quả của việc thay đổi một mô-đun
+- Tối thiểu hóa tổng cùng sinh
 - Tối thiểu hóa xuyên cắt giới hạn đóng gói
 - Cực đại hóa bên trong giới hạn đóng gói.
 
 
 Các loại cùng sinh
 Loại    Mô tả
-Tên     Nếu một phương thức kết nối tới một thuộc tính, nó gắn kết với tên thuộc tính. Nếu tên thuộc tính thay đổi, nội dung của phương thức cũng sẽ cần phải thay đổi.
-Kiểu hoặc lớp     Nếu một lớp có một thuộc tính kiểu A, nó được gắn với kiểu của thuộc tính. Nếu kiểu của thuộc tính thay đổi, khai báo thuộc tính cũng sẽ cần phải thay đổi.
-Quy ước       Một lớp có một thuộc tính, theo đó một khoảng giá trị có ý nghĩa (ví dụ, các số tài khoản với các giá trị được thiết lập trong khoảng từ 1000 đến 1999). Nếu khoảng cần thay đổi, thì tất cả các phương thức sử dụng thuộc tính cũng cần phải được điều chỉnh.
-Giải thuật    Hai phương thức khác nhau của một lớp phụ thuộc vào cùng một giải thuật để chạy đúng (ví dụ, chèn một phần tử vào một mảng và tìm một phần tử trong cùng mảng). Nếu giải thuật cơ bản cần thay đổi, thì các phương thức chèn và tìm kiếm cũng cần phải thay đổi.
-Vị trí       Trật tự mã nguồn trong một phương thức hoặc trật tự tham số đối với một phương thức là đặc biệt quan trọng để phương thức đó chạy đúng. Nếu cả hai cùng sai, thì phương thức đó, tối thiểu sẽ không hoạt động đúng.
+Tên     Nếu một phương thức tham chiếu tới một thuộc tính, nó được gắn chặt với tên thuộc tính. Nếu tên thuộc tính thay đổi, nội dung của phương thức cũng sẽ cần phải thay đổi.
+Kiểu hoặc lớp     Nếu một lớp có một thuộc tính thuộc kiểu A, nó được gắn với kiểu của thuộc tính. Nếu kiểu của thuộc tính thay đổi, khai báo thuộc tính sẽ cần phải thay đổi.
+Quy ước       Một lớp có một thuộc tính, theo đó một khoảng giá trị có một ý nghĩa ngữ nghĩa (ví dụ, các số tài khoản với các giá trị được thiết lập trong khoảng từ 1000 đến 1999). Nếu khoảng giá trị cần thay đổi, thì tất cả các phương thức sử dụng thuộc tính đó cũng cần phải được điều chỉnh.
+Giải thuật    Hai phương thức khác nhau của một lớp phụ thuộc vào cùng một giải thuật để hoạt động đúng (ví dụ, chèn một phần tử vào một mảng và tìm một phần tử trong cùng mảng). Nếu giải thuật cơ bản cần thay đổi, thì các phương thức chèn và tìm kiếm cũng cần phải thay đổi.
+Vị trí       Trật tự mã nguồn trong một phương thức hoặc trật tự tham số đối với một phương thức là đặc biệt quan trọng để phương thức đó chạy đúng. Nếu có một điều sai, thì phương thức đó, tối thiểu sẽ không hoạt động đúng.
 Nguồn: Meilir Page-Jones, "Comparing Techniques by Means of Encapsulation and Connascence" and Meilir Page-Jones, Fundamentals of Object-Oriented Design in UML.
 
 
 Các hoạt động thiết kế đối tượng
 
 
-Các thiết lập bổ xung
-. Đầu tiên kiểm duyệt tập mô hình hiện tại
+Các đặc tả bổ xung
+. Đầu tiên kiểm tra lại tập mô hình hiện tại
 - Đầy đủ nhưng chỉ có các lớp cần thiết để giải quyết vấn đề
 - Không bỏ qua thuộc tính hoặc phương thức 
 - Không có thuộc tính hoặc phương thức ngoại lai
@@ -199,7 +204,7 @@ Tối ưu hóa thiết kế
 Các ràng buộc và các thỏa thuận
 
 
-Các loại giới hạn
+Các loại ràng buộc
 . Tiền điều kiện
 Phải đúng trước khi thực hiện phương thức
 . Hậu điều kiện
@@ -210,30 +215,35 @@ Phải luôn luôn đúng
 
 Các bất biến trên một biểu đồ lớp
 
-
 [Khách hàng] 1..1 --- 0..* [Đơn hàng]
+
 [Đơn hàng] 0..*--[Sản phẩm Đơn hàng]-- 1..*[Sản phẩm]
+
 [Đơn hàng]0..* --- 1..1[Trạng thái]
+
 Đơn hàng::Tổng thành phần[0..1]:double -- <<bất biến>> {Tổng thành phần = Tổng(Đơn hàng.Lấy mở rộng()}
+
 Đơn hàng::Thuế[0..1]:double -- <<bất biến>> {Thuế=Trạng thái.Lấy mức thuế()*Tổng thành phần}
+
 Đơn hàng::Trạng thái[1..1]:Trạng thái --- <<bất biến>> {Mã khách hàng = Khách hàng.Lấy mã khách hàng()}
+
 Đơn hàng::Tên trạng thái[1..1]:String --- <<bất biến>> {Tên trạng thái = Trạng thái.Lấy trạng thái()}
 
 
 Các thỏa thuận
 . Các thỏa thuận ghi lại các thông điệp truyền giữa các đối tượng
-. Tạo một thỏa thuận cho mỗi phương thức có mức khả kiến là công cộng trong một lớp
+. Một thỏa thuận được tạo cho mỗi phương thức có mức khả kiến là công cộng trong một lớp
 . Cần chứa đủ thông tin cho người lập trình hiểu phương thức được yêu cầu làm gì.
 
 
-Các thành phần của một hợp đồng
+Các thành phần của một thỏa thuận
 . Tên phương thức
 . Tên lớp
-. Số ID
+. Mã số ID
 . Các đối tượng thành viên
-. Các ca sử dụng gắn kết
+. Các ca sử dụng liên quan
 . Mô tả
-. Các tham số nhận được
+. Các tham số được nhận
 . Kiểu dữ liệu trả về
 . Tiền điều kiện
 . Hậu điều kiện
@@ -241,7 +251,7 @@ Các thành phần của một hợp đồng
 
 Ví dụ biểu mẫu thỏa thuận
 Tên phương thức: |  Tên lớp:    | ID:
-Khách hàng (người sử dụng):
+Khách hàng (các đối tượng sử dụng):
 Ca sử dụng liên quan:
 Mô tả trách nhiệm:
 Các tham số được nhận:
@@ -294,8 +304,8 @@ Trả về
 
 Tổng hợp
 . Các đặc điểm hướng đối tượng cơ bản
-. Tiêu trí thiết kế
+. Tiêu chuẩn thiết kế
 . Các hoạt động thiết kế đối tượng
-. Các ràng buộc và các hợp đồng
+. Các ràng buộc và các thỏa thuận
 . Đặc tả phương thức
 
