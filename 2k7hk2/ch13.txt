@@ -1,0 +1,164 @@
+Chương 13:
+Xây dựng
+
+
+Các mục tiêu
+. Làm quen với quá trình xây dựng hệ thống.
+. Hiểu các hình thức khác nhau của kiểm thử và tình huống sử dụng
+. Hiểu cách xây dựng tài liệu
+
+
+Giới thiệu
+. Xây dựng là phát triển tất cả các thành phần của hệ thống, tài liệu, và những quy trình vận hành mới.
+. Lập trình là công đoạn lớn nhất, nhưng ít rủi ro nhất của phát triển hệ thống.
+. Một chương trình không được coi là hoàn thiện cho tới khi các kiểm thử cho chương trình đó được vượt qua.
+
+
+Quản lý việc lập trình
+
+
+Phân công lập trình viên
+. Đầu tiên, gom nhóm các lớp liên quan, sau đó giao mỗi nhóm cho một lập trình viên.
+. Yêu cầu thời gian tỉ lệ với số lượng lập trình viên
+- Nhiều lập trình viên hơn, nhiều sự điều phối hơn, có nghĩa là thời gian thực sự cho việc lập trình sẽ ít hơn.
+- Lựa chọn tốt nhất là sử dụng một nhóm lập trình viên nhỏ
+- Chia các dự án phức tạp thành các thành phần độc lập
+
+
+Điều phối các hoạt động
+. Họp dự án hàng tuần
+. Tạo và áp dụng các tiêu chuẩn
+. Chia tài nguyên thành ba lĩnh vục:
+- Phát triển
+- Kiểm thử
+- Sản phẩm
+. Thiết lập các thước đo quản lý thay đổi
+
+
+Quản lý lịch trình
+. Ước lượng thời gian phải được xem lại cùng với sự tiến triển của việc xây dựng
+- Xây dựng ngưỡng lỗi 10% cho tất cả các lịch trình
+. Biến dạng phạm vi xảy ra khi các yêu cầu mới được thêm vào dự án sau khi thiết kế hệ thống đã kết thúc.
+. Đánh giá rủi ro có thể giúp dự đoán các vấn đề trước khi chúng làm lệch dự án
+
+
+Thiết kế các kiểm thử
+
+
+Kiểm thử
+. Mục đích của kiểm thử là phát hiện nhiều lỗi nhất có thể
+- Không thể chứng minh hệ thống không có lỗi
+- Quá đắt để tìm tất cả các lỗi có thể
+. Bốn giai đoạn kiểm thử
+1. Kiểm thử đơn vị
+2. Kiểm thử tích hợp
+3. Kiểm thử hệ thống
+4. Kiểm thử chấp nhận
+
+
+Kiểm thử và hướng đối tượng
+. Đóng gói và ẩn dữ liệu
+. Đa hình và kết buộc động
+. Kế thừa
+. Tái sử dụng
+. Quá trình phát triển hướng đối tượng và sản phẩm
+
+
+Lập kế hoạch kiểm thử
+. Kiểm thử giữ vị trí thông suốt sự phát triển của một hệ thống hướng đối tượng.
+. Các kế hoạch kiểm thử xác định một chuỗi các phép thử cần thực hiện
+. Mỗi phép thử có một mục tiêu cụ thể và mô tả các kịch bản kiểm thử cụ thể để kiểm tra.
+. Các thành phần là những mã nguồn cố định thay thế cho phép thực hiện kiểm thử sử dụng các lớp chưa hoàn thiện.
+
+
+Các kiểm thử đơn vị
+. Các kiểm thử đơn vị tập trung vào một lớp đơn lẻ
+. Kiểm thử hộp đen kiểm tra các hành vi có thể nhận biết từ bên ngoài của một lớp
+- Được dẫn dắt bởi các thẻ CRC và các hợp đồng phương thức
+- Người kiểm thử không biết gì về cách lớp được lập trình
+. Kiểm thử hộp trắng kiểm tra nội dung bên trong của một lớp
+- Được dẫn dắt bởi các đặc tả phương thức cho lớp
+
+
+Các quy tắc kiểm thử đơn vị
+1. Trước tiên viết các kịch bản kiểm thử
+2. Xác định đầu ra hoặc kết quả mong đợi
+3. Đừng kiểm tra chương trình của chính mình
+4. Kiểm tra các điều kiện không hợp lệ hoặc không mong đợi
+5. Sử dụng các kịch bản có thể tái hiện được
+6. Không bao giờ viết các kịch bản thành công lần đầu.
+7. Xác suất phát hiện thêm lỗi trong một mô-đun bất kỳ tỉ lệ thuận trực tiếp với số lượng lỗi đã được phát hiện trong mô-đun đó.
+
+
+Các kiểm thử tích hợp
+. Kiểm tra liệu một tập lớp phải hoạt động cùng nhau có thực sự hoạt động tốt cùng nhau không lỗi
+. Bốn cách tiếp cận phổ biến
+- Kiểm thử giao diện người dùng
+- Kiểm thử ca sử dụng
+- Kiểm thử tương tác
+- Kiểm thử giao diện hệ thống
+. Hầu hết các dự án sử dụng cả bốn cách tiếp cận
+
+
+Kiểm thử cuối cùng
+. Kiểm thử hệ thống xác định
+- Hệ thống đáp ứng các yêu cầu nghiệp vụ tốt đến đâu
+- Tính hữu dụng, bảo mật, và hiệu năng khi có tải
+- Tính đầy đủ của tài liệu 
+. Kiểm thử sự chấp nhận
+- Chủ yếu bởi các người dùng với sự hỗ trơ từ đội dự án
+- Các mục tiêu là xác nhận liệu hệ thống đã hoàn thiện và chấp nhận được đối với người dùng
+
+
+Phát triển tài liệu
+
+
+Phát triển tài liệu
+. Các tài liệu hệ thống phải được hoàn thành cùng với phát triển hệ thống
+. Hai kiểu khác nhau căn bản
+- Tài liệu hệ thống cho những ai cài đặt, bảo trì hoặc phát triển tiếp trên hệ thống.
+- Tài liệu người dùng là cho những ai sử dụng nó
+. Giả sử rằng người dùng sẽ không đọc hướng dẫn trước khi bắt đầu sử dụng hệ thống!
+- Tài liệu trực tuyến là tiêu chuẩn ngày nay
+
+
+Các loại tài liệu
+. Các tài liệu tra cứu
+- Giải thích cho người dùng cách thực hiện những tác vụ cụ thể.
+. Các hướng dẫn quy trình
+- Mô tả cách thực hiện các tác vụ nghiệp vụ
+- Mỗi quy trình thường bao gồm nhiều tác vụ
+. Các hướng dẫn
+- Dạy mọi người cách sử dụng các thành phần chính của một hệ thống
+
+
+Thiết kế cấu trúc tài liệu
+. Phát triển một tập tài liệu điều khiển điều hướng có vai trò dẫn dắt người dùng tới các tài liệu chủ đề.
+. Các chủ đề thường đến từ ba nguồn
+- Các lệnh và danh mục trong giao diện người dùng.
+- Cách thực hiện những tác vụ cụ thể
+- Định nghĩa những thuật ngữ quan trọng
+
+
+Ví dụ trợ giúp trực tuyến
+Các nút điều hướng 
+Tiêu đề tác vụ
+Các chỉ thị từng bước
+
+
+Viết các tài liệu chủ đề
+. Sử dụng giọng điệu chủ động
+. Sử dụng phong cách viết rõ ràng
+. Sử dụng thuật ngữ nhất quán
+. Sử dụng ngôn ngữ đơn giản
+. Sử dụng ngôn ngữ thân thiện
+. Sử dụng các cấu trúc ngữ pháp song song
+. Sử dụng đúng các bước
+. Sử dụng các đoạn văn ngắn
+
+
+Tổng kết
+.Quản lý lập trình
+.Thiết kế các kịch bản kiểm thử
+.Phát triển tài liệu
+
