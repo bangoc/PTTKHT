@@ -1,0 +1,450 @@
+Chương 10:
+Thiết kế tầng quản lý dữ liệu
+
+
+Các mục tiêu
+. Làm quen với một vài định dạng lưu trữ đối tượng
+. Có khả năng ánh xạ các đối tượng vấn đề lĩnh vực tới các định dạng lưu trữ đối tượng khác
+. Có khả năng áp dụng các bước chuẩn hóa đối với cơ sở dữ liệu quan hệ
+. Có khả năng tối ưu hóa một cơ sở dữ liệu quan hệ để lưu trữ và truy cập đối tượng
+. Làm quen với các chỉ mục cho các cơ sở dữ liệu quan hệ
+. Có khả năng đánh giá kích thước của một cơ sở dữ liệu quan hệ
+. Có khả năng thiết kế các lớp truy cập và thao tác dữ liệu
+
+
+Tầng quản lý dữ liệu
+. Bao gồm đồng thời
+- Lô-gic truy cập và thao tác dữ liệu, và
+- Thiết kế thực tế của cơ sở lưu trữ
+. Phương pháp thiết kế bốn bước
+1. Lựa chọn định dạng của cơ sở lưu trữ
+2. Ánh xạ các đối tượng vấn đề lĩnh vực tới các định dạng lưu trữ đối tượng
+3. Tối ưu hóa định dạng lưu trữ đối tượng
+4. Thiết kế các lớp truy cập và thay đổi dữ liệu
+
+
+Các định dạng lưu trữ đối tượng
+
+
+Các định dạng lưu trữ đối tượng
+. Các tệp (Tuần tự và Ngẫu nhiên)
+. Cơ sở dữ liệu quan hệ
+. Cơ sở dữ liệu đối tượng-quan hệ
+. Cơ sở dữ liệu hướng đối tượng
+
+
+Mẫu tệp
+LNAME,FNAME,TITLE,STREET,CITY,STATE,ZIP,CCTYPE,CCNUM
+Aboutabl,Eric,Ex,Director Security Studies,4225 University Avenue,Harrisonburg,DC,33760,Master Card,87878825611
+....
+
+Cơ sở dữ liệu khách hàng giả định
+
+
+Các tệp truy cập tuần tự & ngẫu nhiên
+. Các tệp truy cập tuần tự cho phép các thao tác tuần tự
+- Đọc, ghi, và tìm kiếm
+. Hiệu quả để viết báo cáo
+. Tìm kiếm là không hiệu quả, bình quân khoảng 50% bản ghi cần được truy cập
+. Hai phiên bản
+- Có trật tự
+- Không có trật tự
+
+
+Các tệp truy cập ngẫu nhiên
+. Chỉ cho phép các thao tác truy cập tệp ngẫu nhiên hoặc trực tiếp
+. Tốt đối với tìm kiếm và cập nhật một đối tượng cụ thể
+. Không hiệu quả để viết báo cáo
+
+
+Các kiểu tệp ứng dụng
+. Các tệp chính
+. Các tệp tra cứu
+. Các tệp giao dịch
+. Tệp kiểm nghiệm
+. Tệp lịch sử
+
+
+Các cơ sở dữ liệu quan hệ
+. Tập hợp các bảng
+- Được tạo thành từ nhiều trường định nghĩa các thực thể
+- Khóa chính có các giá trị duy nhất trong mỗi dòng của một bảng
+- Khóa ngoại là khóa chính của một bảng khác
+. Các bảng có liên quan với nhau
+- Trường khóa chính của một bảng là một trường của một bảng khác và được gọi là khóa ngoại
+- Mối liên hệ được thiết lập bởi một khóa ngoại của một bảng kết nối với khóa chính của một bảng khác
+
+
+Hệ quản trị cơ sở dữ liệu
+. Phần mềm cho phép tạo và thao tác một cơ sở dữ liệu
+. Hệ quản trị cơ sở dữ liệu quan hệ (RDBMS) là một hệ quản trị cơ sở dữ liệu (DBMS) cho một cơ sở dữ liệu quan hệ
+. RDBMS thường hỗ trợ tính toàn vẹn tham chiếu
+- Ý tưởng đảm bảo các giá trị liên kết các bảng lại cùng nhau thông qua các khóa chính và khóa ngoại là hợp lệ và đồng bộ đúng đắn.
+
+
+Ví dụ toàn vẹn tham chiếu
+. Lớp khách hàng có một thuộc tính id khách hàng
+. Lớp Đơn hàng có một thuộc tính id khách hàng xác định khách hàng đã đặt hàng.
+. Bạn sẽ không có khả năng
+- Tạo một đơn hàng cho một khách hàng không tồn tại
+- Xóa một khách hàng là người đã đặt đơn hàng, trừ khi có chính sách về cách xử lý những đơn hàng đó
+- thay đổi giá trị id khách hàng của một khách hàng, trừ khi bạn đồng thời thay đổi giá trị trong các đơn hàng của khách hàng đó
+
+
+Ngôn ngữ truy vấn có cấu trúc
+. Ngôn ngữ tiêu chuẩn để truy cập dữ liệu trong các bảng
+. Các câu lệnh SQL
+- Tạo, chỉnh sửa, và xóa các bảng
+- Thêm, sửa, và xóa dữ liệu
+- Hiển thị dữ liệu từ một hoặc nhiều bảng liên quan
+- Hiển thị dữ liệu tính được từ dữ liệu trong một hoặc nhiều bảng liên quan
+
+SELECT * FROM customers WHERE custID=77
+
+
+Lựa chọn các định dạng lưu trữ
+.Các tệp truy cập tuần tự và ngẫu nhiên
++ Các điểm mạnh chính: 
+Thường là một phần của một ngôn ngữ lập trình hướng đối tượng. 
+Các tệp có thể được thiết kế để đạt hiệu năng cao
+Tốt đối với lưu trữ dữ liệu ngắn hạn.
++ Các điểm yếu chính: 
+Dư thừa dữ liệu. 
+Dữ liệu phải được cập nhật sử dụng chương trình, như là, không có ngôn ngữ truy cập và thay đổi dữ liệu. 
+Không có hạn chế truy cập
++ Các kiểu dữ liệu được hỗ trợ: 
+Đơn giản và phức tạp
++ Các kiểu hệ thống ứng dụng được hỗ trợ: 
+Xử lý giao dịch
++ Các định dạng lưu trữ đang có: 
+Phụ thuộc vào tổ chức
++ Các nhu cầu tương lai
+Có ít tiềm năng tương lai
+. Hệ quản trị CSDL quan hệ:
++ Các điểm mạnh chính: 
+Dẫn đầu trong thị trường cơ sở dữ liệu.
+Có thể đáp ứng nhiều nhu cầu dữ liệu khác nhau.
++ Các điểm yếu chính:
+Không thể tiếp nhận dữ liệu phức tạp.
+Không hỗ trợ hướng đối tượng.
+Không tương thích kỹ thuật giữa bảng và đối tượng.
++ Các kiểu dữ liệu được hỗ trợ:
+Đơn giản
++ Các kiểu hệ thống ứng dụng được hỗ trợ:
+Xử lý giao dịch và ra quyết định
++ Các định dạng lưu trữ đang có: 
+Phụ thuộc vào tổ chức
++ Nhu cầu tương lai: 
+Có nhiều tiềm năng tương lai
+. Hệ quản trị CSDL đối tượng-quan hệ
++ Các điểm mạnh chính:
+Dựa trên các công nghệ đã được kiểm chứng và đã được thiết lập, ví dụ SQL.
+Có khả năng giải quyết nhu cầu dữ liệu phức tạp
++ Các điểm yếu chính:
+Hỗ trợ hướng đối tượng hạn chế.
+Không tương thích kỹ thuật giữa các đối tượng và các bảng.
++ Các kiểu dữ liệu được hỗ trợ:
+Đơn giản và phức tạp
++ Các kiểu hệ thống ứng dụng được hỗ trợ:
+Xử lý giao dịch và ra quyết định
++ Các định dạng lưu trữ đang có: 
+Phụ thuộc vào tổ chức
++ Nhu cầu tương lai:
+Có nhiều tiềm năng cho tương lai
+. Hệ quản trị CSDL hướng đối tượng
++ Các điểm mạnh chính:
+Có khả năng tiếp nhận dữ liệu phức tạp.
+Trực tiếp hỗ trợ hướng đối tượng.
++ Các điểm yếu chính:
+Công nghệ còn đang sơ khai.
+Các kỹ năng khó tìm.
++ Các kiểu dữ liệu được hỗ trợ:
+Đơn giản và phức tạp.
++ Các kiểu hệ thống ứng dụng được hỗ trợ:
+Xử lý giao dịch và ra quyết định.
++ Các định dạng lưu trữ đang tồn tại: 
+Phụ thuộc vào tổ chức
++ Các nhu cầu tương lai:
+Có nhiều tiềm năng ứng dụng tương lai.
+
+
+Ánh xạ các đối tượng vấn đề - lĩnh vực tới các định dạng lưu trữ đối tượng
+
+
+Ánh xạ các lớp vấn đề lĩnh vực tới hệ quản trị CSDL quan hệ
+1. Ánh xạ tất cả các lớp vấn đề lĩnh vực cụ thể tới các bảng hệ quản trị CSDL quan hệ.
+2. Ánh xạ các thuộc tính đơn trị đến các cột trong các bảng.
+3. Ánh xạ các phương thức tới các chức năng được lưu hoặc tới các mô-đun chương trình.
+4. Ánh xạ tổng hợp đơn trị và các mối quan hệ liên quan tới một cột có thể lưu khóa của bảng liên quan.
+5. Ánh xạ các thuộc tính đa trị và các nhóm lặp tới các bảng mới và tạo mối quan hệ một-nhiều từ bảng gốc tới các bảng mới.
+
+
+Ánh xạ các lớp vấn đề lĩnh vực tới RDBMS
+6. Ánh xạ tổng hợp đa trị và các mối quan hệ liên quan tới một bảng liên quan mới có tham chiếu đồng thời hai bảng gốc cùng nhau. Sao chép khóa chính đồng thời từ hai bảng gốc tới bảng liên kết mới.
+7. Đối với các mối quan hệ tổng hợp và liên quan có kiểu hỗn hợp, sao chép khóa chính từ phía đơn trị (1..1 hoặc 0..1) của mối quan hệ sang một cột mới trong bảng ở phía đa trị (1..* hoặc 0..*) của mối quan hệ có thể lưu khóa của bảng liên quan.
+8. Đảm bảo rằng khóa chính của thực bản của lớp con là giống khóa chính của lớp cha.
+
+
+Tối ưu hóa lưu trữ đối tượng dựa trên RDBMS
+
+
+Tối ưu hóa hiệu quả lưu trữ
+. Không có dư thừa dữ liệu
+- Lãng phí không gian
+- Để nhiều không gian có thể có lỗi
+. Ít giá trị null trong các bảng
+- Khó biểu diễn
+
+
+Chuẩn hóa
+. Nói cho chúng ta biết dữ liệu được thiết lập tốt như thế nào trong một RDBMS
+. Giảm dư thừa dữ liệu
+. Bốn mức chuẩn hóa đầu tiên gồm có
+- Dạng chuẩn 0: Các luật chuẩn hóa không được áp dụng
+- Dạng chuẩn 1: Không có trường đa giá trị
+- Dạng chuẩn 2: Phụ thuộc vào toàn bộ khóa chính
+- Dạng chuẩn 3: Không có trường phụ thuộc vào trường không phải khóa chính
+
+
+Các bước chuẩn hóa
+Dạng chuẩn 0
+Có bất kỳ bảng nào có trường trùng lặp? Có vài bản ghi nào có số lượng cột khác với các bản ghi khác?  
+Có: Loại bỏ các trường trùng lặp. Thêm một bảng mới chứa các trường trùng lặp. 
+Không: Mô hình dữ liệu là 1NF
+⬇  Dạng chuẩn 1
+Có phải khóa chính được tạo thành bởi nhiều hơn một trường? Nếu đúng, có bất kỳ trường nào chỉ phụ thuộc vào một phần của khóa chính?
+Có: Loại bỏ phụ thuộc bộ phận. Thêm một bảng mới chứa các trường chỉ phụ thuộc một phần.
+Không: Mô hình dữ liệu là 2NF
+⬇ Dạng chuẩn 2
+Có bất kỳ trường nào phụ thuộc vào trường khác không phải khóa chính?
+Có: Loại bỏ phụ thuộc bắc cầu. Bổ xung một bảng mới chỉ chứa các trường phụ thuộc bắc cầu.
+Không: Mô hình dữ liệu là 3NF
+⬇
+Dạng chuẩn 3
+
+
+Ví dụ tối ưu hóa lưu trữ - 0NF
+[          Đơn hàng            ]
+|------------------------------|
+|-Mã đơn hàng: unsigned long   |
+|-Ngày: Date                   |
+|-Mã khách hàng: unsigned long |
+|-Họ: String                   |
+|-Tên: String                  |
+|-Trạng thái: String           |
+|-Mức thuế: float              |
+|-Mã sản phẩm 1: unsigned long |
+|-Mô tả sản phẩm 1: String     |
+|-Giá sản phẩm 1: double       |
+|-SL sản phẩm 1: unsigned long |
+|-Mã sản phẩm 2: unsigned long |
+|-Mô tả sản phẩm 2: String     |
+|-Giá sản phẩm 2: double       |
+|-SL sản phẩm 2: unsigned long |
+|------------------------------|
+Các bản ghi mẫu
+- Dư thừa dữ liệu: các trường Họ, tên, trạng thái lặp nhiều lần.
+- Các ô rỗng (null): Nhiều dòng không có dữ liệu ở các cột Mã sản phẩm 2, mô tả sản phẩm 2, giá sản phẩm 2, số lượng sản phẩn 2.
+
+
+Ví dụ tối ưu hóa lưu trữ - 1NF
+Mô hình sau khi điều chỉnh:
+[Đơn hàng]0..*-----1..*[Sản phẩm đơn hàng]
+
+[            Đơn hàng         ]
+|-----------------------------|
+|-Mã đơn hàng: unsigned long  |
+|-Ngày: Date                  |0..*--
+|-Mã khách hàng: unsigned long|
+|-Họ: String                  |
+|-Tên: String                 |
+|-Trạng thái: String          |
+|-Mức thuế: float             |
+|-----------------------------|
+|-----------------------------|
+Ghi chú: Mã đơn hàng sẽ giữ vai trò như một phần trong khóa chính của đơn hàng
+Ghi chú: Mã khách hàng sẽ giữ một phần như khóa chính của đơn hàng
+      [     Sản phẩm đơn hàng     ]
+      |---------------------------|
+      |-Mã đơn hàng: unsigned long|
+--1..*|-Mã sản phẩm: String       |
+      |-Mô tả sản phẩm: String    |
+      |-Giá sản phẩm: double      |
+      |-SL sản phẩm: unsigned long|
+      |---------------------------|
+      |---------------------------|
+Ghi chú: Mã đơn hàng sẽ giữ vai trò như một phần của khóa chính của Sản phẩm đơn hàng
+Ghi chú: Mã sản phẩm sẽ giữ vai trò như một phần của khóa chính của Sản phẩm Đơn hàng
+Ghi chú: Mã đơn hàng còn sẽ giữ vai trò như khóa ngoại của Sản phẩm Đơn hàng 
+
+
+Các bản ghi mẫu 1NF
+
+Bảng Đơn hàng   Bảng Sản phẩm Đơn hàng
+
+Vấn đề: Đơn hàng 237 có hai sản phẩm. Đơn hàng 248 có 3 sản phẩm
+Mô tả và giá sản phẩm chỉ phụ thuộc vào mã sản phẩm
+Trong bảng đơn hàng, họ và tên khách hàng chỉ phụ thuộc vào mã khách hàng
+
+
+Ví dụ tối ưu hóa lưu trữ - 2NF
+[Khách hàng]1..1 ----- 0..*[Đơn hàng]
+[Đơn hàng]0..*--[Sản phẩm Đơn hàng]--1..*[Sản phẩm]
+
+[          Khách hàng           ]
+|-------------------------------|
+|-Mã khách hàng: unsigned long  |
+|-Họ: String                    |
+|-Tên: String                   |
+|_______________________________|
+Ghi chú: Mã khách hàng sẽ giữ vai trò như khóa chính của Khách hàng
+
+|-------------------------------|
+[         Đơn hàng              ]
+|-------------------------------|
+|-Mã đơn hàng:unsigned long     |
+|-Ngày: Date                    |
+|-Mã khách hàng: unsigned long  |
+|-Trạng thái: String            |
+|-Mức thuế: float               |
+|-------------------------------|
+|_______________________________|
+Ghi chú: Mã đơn hàng sẽ giữ vai trò như khóa chính của Đơn hàng
+Ghi chú: Mã khách hàng sẽ giữ vai trò như khóa ngoại của Đơn hàng
+
+[      Sản phẩm Đơn hàng      ]
+|------------------------------|
+|-Mã đơn hàng: unsigned long   |
+|-Mã sản phẩm: unsigned long   |
+|-Số lượng: unsigned long      |
+|------------------------------|
+|______________________________|
+Ghi chú: Mã đơn hàng sẽ giữ vai trò như một phần của khóa chính của Sản phẩn Đơn hàng
+Ghi chú: Mã đơn hàng còn sẽ giữ vai trò như một khóa ngoại trong Sản phẩm Đơn hàng
+Ghi chú: Mã sản phẩm sẽ giữ vai trò như một phần của khóa chính trong Sản phẩm ĐƠn hàng
+Ghi chú: Mã sản phẩm còn sẽ giữ vai trò như khóa ngoại trong Sản phẩm Đơn hàng
+
+[          Sản phẩm          ]
+|----------------------------|
+|-Mã sản phẩm: unsigned long |
+|-Mô tả sản phẩm: String     |
+|-Giá: double                |
+|----------------------------|
+|____________________________|
+Ghi chú: Mã sản phẩm sẽ giữ vai trò như một phần của khóa chính của Sản phẩm
+
+
+Các bản ghi mẫu 2NF
+   Bảng Khách hàng
+Mã khách hàng   Họ    Tên
+2242  DeBerry   Ann
+4254  Bailey   Ryan
+...🠅
+Họ và tên được chuyển sang bảng Khách hàng để loại bỏ dư thừa
+   
+   Bảng đơn hàng
+Mã đơn hàng  Ngày  Mã khách hàng  Trạng thái  Mức thuế
+234  11/23/00  2242   DC  0.065
+237  11/23/00  2242   DC  0.065
+...
+   
+    Bảng sản phẩm Đơn hàng
+Mã đơn hàng   Mã sản phẩm   SLSP
+237   111   1
+237   444   1
+....
+   
+    Bảng sản phẩm
+Mã sản phẩm   Mô tả sản phẩm   Giá SP
+111   Wine Guide   $15.00
+444   Wine Gift Pack   $60.00
+...🠅
+Mô tả và giá sản phẩm được chuyển sang bảng Sản phẩm để loại bỏ dư thừa
+
+
+Ví dụ tối ưu hóa lưu trữ - 3NF
+[Khách hàng]1..1---0..*[Đơn hàng]
+[Đơn hàng]0..*--[Sản phẩm Đơn hàng]--1..*[Sản phẩm]
+[Đơn hàng]0..*---1..1[Trạng thái]
+
+[         Khách hàng           ]
+|------------------------------|
+|-id khách hàng: unsigned long |
+|-Họ: String                   |
+|-Tên: String                  |
+|------------------------------|
+|______________________________|
+
+[         Đơn hàng             ]
+|------------------------------|
+|-Mã đơn hàng: unsigned long   |
+|-Ngày: Date                   |
+|-Mã khách hàng: unsigned long |
+|-Trạng thái: String           |
+|------------------------------|
+|______________________________|
+
+[        Sản phẩm Đơn hàng     ]
+|------------------------------|
+|-Mã đơn hàng: unsigned long   |
+|-Mã sản phẩm: unsigned long   |
+|-Số lượng: unsigned long       |
+|------------------------------|
+|______________________________|
+
+[         Sản phẩm            ]
+|-----------------------------|
+|-Mã sản phẩm: unsigned long  |
+|-Mô tả sản phẩm: String      |
+|-Giá: double                 |
+|-----------------------------|
+|_____________________________|
+
+[         Trạng thái          ]
+|-----------------------------|
+|-Trạng thái: String          |
+|-Mức thuế: float             |
+|-----------------------------|
+|_____________________________|
+
+
+Các yêu cầu phi chức năng và thiết kế tầng quản lý dữ liệu
+
+
+Các yêu cầu phi chức năng
+. Các yêu cầu vận hành
+- Các công nghệ tẩng DAM phải được sử dụng
+. Các yêu cầu hiệu năng
+- Tốc độ và dung lượng tầng DAM
+. Các yêu cầu bảo mật
+- Quản lý truy cập, mã hóa, và sao lưu
+. Các yêu cầu chính trị & văn hóa
+- Định dạng ngày tháng, chuyển đổi ngoại tệ
+
+
+Thiết kế các lớp truy cập và thao tác dữ liệu
+
+
+Truy cập & thao tác dữ liệu
+. Các lớp truy cập & thao tác dữ liệu (DAM) hoạt động như người phiên dịch giữa lưu trữ đối tượng và các đối tượng vấn đề lĩnh vực.
+. Sẽ cần có một lớp DAM cho mỗi lớp cụ thể của vấn đề lĩnh vực.
+
+
+Ví dụ các lớp DAM
+Các bảng RDBMS   Các lớp DAM   Các lớp vấn đề-lĩnh vực
+[bảng người]          [Người]
+[bảng bệnh nhân]  [bệnh nhân DAM]
+[bảng dịch vụ bảo hiểm]    [bệnh nhân]
+[bảng nhiễm bệnh]       [triệu chứng]
+[bảng triệu chứng]        [lịch hẹn]
+[bảng dấu hiệu] [triệu chứng DAM]
+[bảng lịch hẹn]  [Lịch hẹn DAM]
+
+
+Tổng hợp
+. Các định dạng lưu trữ đối tượng
+. Ánh xạ giữa các đối tượng vấn đề lĩnh vực tới các định dạng lưu trữ đối tượng
+. Tối ưu hóa lưu trữ đối tượng dựa trên RDBMS
+. Các yêu cầu phi chức năng và thiết kế tầng quản lý dữ liệu
+. Thiết kế các lớp truy cập và thay đổi dữ liệu
+

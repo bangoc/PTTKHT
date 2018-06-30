@@ -1,0 +1,155 @@
+Chương 2:
+Chuẩn bị dự án,
+Quản lý dự án & Xác định yêu cầu
+
+
+Mục tiêu
+. Hiểu sự quan trọng của việc liên kết hệ thống thông tin với nhu cầu kinh tế.
+. Có khả năng tạo yêu cầu dự án.
+. Hiểu cách đánh giá tính khả thi kỹ thuật, kinh tế và tổ chức.
+. Có khả năng thực hiện phân tích tính khả thi.
+. Hiểu cách dự án được lựa chọn trong một vài tổ chức.
+
+
+Các dự án thành công
+. Chi phí: Khi kết thúc dự án, không có chi phí phát sinh so với khoản chi ban đầu.
+. Lịch trình: Dự án được chuyển giao không chậm hơn so với thời gian đã định.
+. Họat động: Sau khi chuyển giao, dự án có tất cả các tính năng và chức năng được yêu cầu từ đầu.
+
+
+Vì sao chúng ta phải quan tâm
+Bạn có muốn mua một chiếc ô tô với xác suất lái nó mà không gặp vấn đề gì chỉ là 28%?
+
+
+Những thất bại đáng kể trong CNTT gần đây
+Công ty      Năm     Thiệt hại
+Hudson Bay (Canada)  2005  Các vấn đề liên quan đến hệ thống kho vận dẫn đến thiệt hại 33.3 triệu đô-la
+UK Inland Revenue 2004/5 Lỗi phần mềm dẫn đến khoản chi trả quá mức tín dụng thuế 3.45 tỉ đô-la.
+Avis Europe PLC (UK)  2004  Hủy hệ thống hoạch định tài nguyên doanh nghiệp (ERP) sau khi đã đầu tư 54.5 triệu đô-la.
+Ford Motor  2004  Từ bỏ hệ thống bán hàng sau khi đầu tư 400 triệu đô-la chi phí triển khai.
+Hewlett-Packard Co.  2004  Các vấn đề của Hệ thống hoạch định tài nguyên doanh nghiệp dẫn đến thiệt hại 160 triệu đô-la.
+AT&T Wireless  2004   Các vấn đề liên quan đến cập nhật hệ thống quản lý quan hệ khách hàng dẫn đến thiệt hại 100 triệu đô-la.
+
+
+Xác định dự án
+
+
+Xác định và chuẩn bị dự án
+. Các dự án được dẫn dắt bởi các nhu cầu kinh tế
+- Được xác định bởi người làm nghiệp vụ
+- Được xác định bởi người làm CNTT
+- (thậm chí tốt hơn) được xác định đồng thời bởi người làm nghiệp vụ và người làm CNTT
+. Người đầu tư dự án tin tưởng vào hệ thống và muốn nó thành công
+- Bình thường đây là người kinh doanh
+- Cần có quyền quyết định thúc đẩy thực hiện nó
+
+
+Giá trị kinh tế
+. Giá trị hữu hình
+- Có thể dễ dàng định lượng và đo được
+- Ví dụ: Giảm 2% chi phí vận hành
+. Giá trị vô hình
+- Là kết quả từ niềm tin trực quan rằng hệ thống tạo ra những lợi ích quan trọng, nhưng khó đo đạc cho tổ chức.
+- Ví dụ: Cải thiện dịch vụ khách hàng.
+
+
+Các thành phần của một yêu cầu hệ thống
+. Nhà tài trợ dự án
+- Điểm giao tiếp chính của dự án
+. Nhu cầu kinh tế
+- Lý do phát sinh dự án
+. Yêu cầu nghiệp vụ
+- Các tiềm năng kinh tế hệ thống cần có
+. Giá trị kinh kế
+- Những lợi ích mà tổ chức có thể mong đợi từ dự án
+. Các vấn đề đặc biệt
+- Những gì còn lại cần quan tâm
+
+
+Phân tích tính khả thi
+
+
+Phân tích tính khả thi
+. Hướng dẫn công ty trong việc xác định nên hay không nên thực hiện dự án.
+. Xác định những rủi ro của dự án cần giải quyết nếu dự án được thông qua.
+. Các thành phần chính
+- Tính khả thi kỹ thuật
+- Tính khả thi kinh tế
+- Tính khả thi tổ chức
+
+
+Tính khả thi kỹ thuật
+. Quen thuộc với ứng dụng
+- Ít quen thuộc tạo ra nhiều rủi ro
+. Quen thuộc với công nghệ
+- Ít quen thuộc tạo ra nhiều rủi ro
+. Quy mô dự án
+- Dự án lớn có nhiều rủi ro
+. Tính tương thích
+- Khó khăn trong tích hợp làm tăng rửi ro
+Chúng ta có thể xây dựng nó?
+
+
+Tính khả thi kinh tế
+. Chi phí phát triển
+. Chi phí vận hành thường niên
+. Lợi ích thường niên (tiết kiệm chi phí và thu nhập)
+. Chi phí và lợi ích vô hình
+Chúng ta có nên xây dựng nó?
+
+
+Phân tích chi phí-lợi ích
+Các độ đo hoạt động     Công thức
+Thu nhập từ khoản đầu tư (ROI)   (Tổng lợi ích - tổng chi phí)/tổng chi phí
+Điểm hòa vốn   (Tổng giao dịch trước thuế hàng năm - Tổng tích lũy giao dịch trước thuế) / (Tổng giao dịch trước thuế hàng năm)
+  Sử dụng lượng tiền giao dịch trước thuế hàng năm từ năm đầu khi dự án có lưu lượng dương. Thêm đại lượng đó vào năm mà dự án có lưu lượng dương trừ một.
+Giá trị đại diện (PV) = Lưu lượng tiền / (1 + tỉ lệ quan tâm)^n với n là số năm trong tương lai
+Giá trị đại diện trước thuế  = Tổng lợi ích PV - Tổng chi phí PV
+
+
+Phân tích chi phí-Lợi ích
+
+
+Điểm hòa vốn
+. Chi phí
+. Lợi ích
+Đô la
+         Điểm hòa vốn
+     Năm
+
+
+Tính khả thi tổ chức
+. Các vị trí chủ chốt
+- Người chiến thắng dự án
+- Người quản lý
+- Người dùng
+- Những người khác
+. Dự án có vai trò chiến lược với hoạt động kinh tế hay không?
+Nếu chúng ta xây dựng nó, liệu họ có đến?
+
+
+Lựa chọn dự án
+
+
+Lựa chọn dự án
+. Quản lý hồ sơ dự án
+- Một quá trình tối ưu hóa lựa chọn dự án và trật tự tuần tự để hỗ trợ tốt nhất những mục tiêu kinh tế
+- Các mục tiêu kinh tế được diễn đạt theo
+  . Thước đo định lượng kinh tế
+  . Mục tiêu kinh tế chiến lược
+  . Mục tiêu chiến lược CNTT
+. Khi được lựa chọn, dự án chuyển sang quá trình quản lý dự án.
+
+
+Không nên lựa chọn dự án theo cách
+. Tuần tự, vào trước, ra trước
+. Ảnh hưởng chính trị bởi người tạo dự án
+. Lựa chọn dự án "ồn ào" nhất
+. Phương pháp bất kỳ khác không cân nhắc đến những phân tích thận trọng.
+Một phân tích gần đây thấy rằng khoảng 2% đến 15% dự án được lựa chọn bởi bộ phận CNTT không có ý nghĩa kinh tế chiến lược.
+
+
+Tổng kết
+. Chuẩn bị dự án
+. Phân tích tính khả thi
+. Lựa chọn dự án

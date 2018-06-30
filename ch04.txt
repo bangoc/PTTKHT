@@ -1,0 +1,318 @@
+Chương 4:
+Xác định yêu cầu
+
+
+Mục tiêu
+. Hiểu cách xác định yêu cầu
+. Làm quen với các kỹ thuật phân tích yêu cầu
+. Hiểu khi nào thì sử dụng kỹ thuật phân tích yêu cầu nào
+. Hiểu cách thu thập yêu cầu bằng phỏng vấn, phiên JAD, tạo khảo sát, phân tích tài liệu, và quan sát
+. Hiểu khi nào thì sử dụng kỹ thuật thu thập yêu cầu nào.
+
+
+Vòng đời phát triển và yêu cầu
+. Vòng đời phát triển biến đổi hệ thống hiện có (as is) thành hệ thống được đề xuất (to be).
+. Xác định yêu cầu là một bước có tính quyết định cao nhất đối với toàn bộ vòng đời hệ thống
+- Các nghiên cứu cho thấy hơn một nửa trong tổng số các hệ thống thất bại có nguyên nhân là các vấn đề liên quan đến yêu cầu.
+
+
+Xác định yêu cầu
+
+
+Nôị dung của yêu cầu
+. Một tuyên bố về những việc mà hệ thống phải làm hoặc những đặc điểm mà nó phải có.
+. Trong quá trình phân tích, các yêu cầu được viết từ góc nhìn của người kinh doanh.
+. Có hai loại yêu cầu:
+- Chức năng
+- Phi chức năng
+
+
+Các yêu cầu phi chức năng
+Loại yêu cầu    Ví dụ
+Vận hành  . Hệ thống cần có khả năng nằm gọn trong túi hoặc một cái ví.
+           . Hệ thống cần có khả năng tích hợp với hệ thống hiện có.
+Hiệu năng  . Giao dịch bất kỳ giữa người dùng và hệ thống không được kéo dài quá 2 giây.
+           . Hệ thống cần nhận được thông tin cập nhật về hàng hóa thường xuyên theo chu kỳ 15 phút.
+Bảo mật    . Chỉ người quản lý trực tiếp có quyền xem hồ sơ cá nhân của nhân viên.
+           . Các nhân viên có thể xem lịch sử giao dịch của họ trong thời gian hành chính.
+Văn hóa & Chính trị    . Hệ thống cần có khả năng phân biệt giữa đô-la Mỹ và đồng tiền Châu Âu.
+    . Hệ thống phải tương thích với các quy chuẩn công nghiệp bảo hiểm
+
+
+Nội dung của yêu cầu
+. Đúng đắn
+. Không đa nghĩa
+. Hoàn thiện
+. Nhất quán
+. Có thể kiểm chứng
+. Có thể chỉnh sửa
+. Có thể theo dõi
+. Được xếp hạng theo sự quan trọng
+
+
+Một yêu cầu tệ
+Đặc tả ban đầu: Phần mềm sẽ không được nạp vào hệ thống từ một nguồn chưa được biết mà không qua kiểm tra và phê chuẩn.
+Phê bình:
+  . Đa nghĩa: Nếu phần mềm đã được kiểm duyệt và phê chuẩn thì liệu nó có thể được tải từ một nguồn chưa biết?
+  . (không thể) kiểm tra - yêu cầu được phát biểu theo cách phủ định làm cho việc kiểm tra là rất khó.
+  . (không thể) theo dõi - thiếu mã định danh
+Đặc tả lại: 3.4.5.2 Phần mềm chỉ được cài vào hệ thống sau khi đã qua kiểm tra và phê chuẩn.
+
+
+Xác định các yêu cầu
+. Các yêu cầu được xác định tốt nhất đồng thời bởi người kinh doanh và người phân tích hệ thống.
+. Các kỹ thuật cho người phân tích hệ thống:
+- Phỏng vấn
+- Khảo sát
+- Quan sát
+- Hợp tác phát triển ứng dụng (JAD)
+- Phân tích tài liệu
+
+
+Các chiến lược phân tích yêu cầu
+
+
+Các chiến lược phân tích yêu cầu
+. Quy trình phân tích cơ bản được chia ra thành:
+1. Hiểu hệ thống hiện có
+2. Xác định các cải tiến
+3. Phát triển các yêu cầu cho hệ thống mới
+. Có 3 chiến lược phân tích yêu cầu
+1. Tự động hóa quy trình kinh doanh
+2. Cải tiến quy trình kinh doanh
+3. Tái lập quy trình kinh doanh
+
+
+Tự động hóa quy trình kinh doanh
+. BPA mở ra chiến lược cơ bản, theo đó tổ chức vận hành theo cách không đổi và sử dụng công nghệ máy tính để thực hiện một số công việc.
+. Rủi ro thấp, nhưng thù lao ít
+. Người lập dự án BPA đầu tư một khoản thời gian đáng kể để hiểu hệ thống hiện có bằng cách:
+- Phân tích vấn đề
+- Phân tích nguồn gốc
+
+
+Phân tích vấn đề
+. Người dùng và người quản lý xác định các vấn đề đối với hệ thống hiện tại và mô tả cách giải quyết trong hệ thống mới.
+. Có xu hướng tập trung giải quyết vấn đề hơn là nhấn mạnh tiềm năng
+. Các cải tiến có xu hướng nhỏ và tăng dần
+
+
+Phân tích nguồn gốc
+. Người dùng không được yêu cầu những giải pháp, mà được yêu cầu:
+- Danh sách các vấn đề (có ưu tiên)
+- Tất cả các nguyên nhân gốc có thể cho những vấn đề đó
+. Người phân tích tập chung vào từng vấn đề gốc để tìm:
+- Những giải pháp cho những vấn đề ưu tiên cao nhất
+- Các nguyên nhân gốc phổ biến cho nhiều vấn đề
+
+
+Ví dụ phân tích nguyên nhân gốc
+Bóng đèn cháy thường xuyên
+  Bóng đèn cháy sớm
+    Mua những bóng đèn tốt hơn
+    Sửa đui đèn kém
+    Sửa dây dẫn kém
+    Kiểm soát nhẩy điện
+Bóng đèn cháy sau khi kết thúc thời hạn
+  Bật khi không cần
+    Thay đổi quy trình để tắt đèn
+    Phát triển cách tắt đèn tự động
+  Bật khi cần
+    Tìm cách làm đơn giản hóa quy trình thay mới
+    Mua bóng đèn với thời gian sử dụng lâu hơn
+    Tìm cách chiếu sáng khác
+    Tìm cách khác để đat được kết quả tương tự
+
+
+Cải thiện quy trình kinh doanh
+. BPI tạo ra những thay đổi trung bình cho cách mà tổ chức vận hành đề có được những ưu thế của những tiềm năng mới được cung cấp bởi công nghệ hoặc sao chép nhưng gì mà đối thủ đang làm.
+. Các hoạt động thông thường:
+- Phân tích thời hạn
+- Chi phí theo họat động
+- Các thước đo không chính chức
+
+
+Tái lập quy trình kinh doanh
+. BPR tạo ra những thay đổi mang tính bản chất đối với cách vận hành của tổ chức.
+. Sử dụng một ít thời gian để hiểu hệ thống đang có, bởi vì mục đích của họ là tập trung vào những ý tưởng mới và những cách kinh doanh mới.
+. Các hoạt động phổ biến:
+- Phân tích chi phí
+- Phân tích công nghệ
+- Loại trừ hoạt động
+
+
+Lựa chọn chiến lược hợp lý
+    Tự động hóa quy trình kinh doanh   Cải thiện quy trình kinh doanh   Tái lập quy trình kinh doanh
+Lợi ích tiềm năng   Thấp-Trung bình   Trung bình   Cao
+Chi phí dự án  Thấp   Thấp-Trung bình   Cao
+Độ rộng của phân tích  Hẹp   Hẹp-Trung bình   Rất rộng
+Rủi ro   Thấp-Trung bình   Thấp-Trung bình   Rất cao
+
+
+Các kỹ thuật thu thập yêu cầu
+
+
+Năm bước cơ bản cho phỏng vấn
+. Lựa chọn người phỏng vấn
+. Thiết kế câu hỏi phỏng vấn
+. Chuẩn bị phỏng vấn
+. Tổ chức phỏng vấn
+. Xử lý hậu phỏng vấn
+
+
+Lựa chọn người phỏng vấn
+. Dựa trên nhu cầu thông tin
+. Thường tốt nếu có thể tiếp cận nhiều góc nhìn khác nhau
+- Người quản lý
+- Người dùng
+- Lý tưởng, tất cả các vị trí chủ chốt
+
+
+Các chiến lược phỏng vấn
+Từ trên xuống
+  Bậc cao/Rất khái quát   Làm cách nào để cải tiến quy trình xử lý đơn hàng?
+  Bậc trung/Mức chi tiết trung bình   Chúng ta có thể cắt giảm số lần khách hàng trả hàng đã nhận bằng cách nào?
+  Bậc thấp/Rất chi tiết   Chúng ta có thể giảm số lỗi trong quy trình xử lý đơn hàng bằng cách nào (ví dụ, chuyển phát nhầm sản phẩm)?
+Từ dưới lên
+
+
+Xử lý kết quả hậu phỏng vấn
+   Biên bản phỏng vấn được xác nhận bởi: Linda Estey
+Người được phỏng vấn: Linda Estey,
+       Giám đốc nhân lực
+Người phỏng vấn: Barbara Wixom
+Mục đích phỏng vấn:
+ . Hiểu các báo cáo được cung cấp liên quan đến nhân lực cho hệ thống hiện tại
+ . Xác định thông tin được yêu cầu cho hệ thống mới
+Tóm tắt phỏng vấn:
+. Các mẫu báo cáo của tất cả các báo cáo nhân sự hiện tại được đính kèm vào báo cáo này. Những thông tin không sử dụng và những thông tin còn thiếu đã được ghi chú trong báo cáo.
+. Hai vấn đề lớn nhất với hệ thống hiện tại là:
+  1. Dữ liệu quá cũ (bộ phận nhân sự cần thông tin trong thời hạn hai ngày cuối tháng; các thông tin hiện tại được cung cấp cho họ với độ trễ 3 tuần).
+  2. Dữ liệu thường có chất lượng thấp (thông thường các báo cáo phải nhất quán với cơ sở dữ liệu của phòng nhân sự)
+. Các lỗi thường gặp nhất trong hệ thống hiện có bao gồm thông tin sai về cấp độ công việc và thiếu thông tin lương.
+Các hạng mục mở:
+. Lấy các báo cáo thường nhật hiện tại từ Mary Skudma (mở rộng 4355)
+. Kiểm tra các tính toán được sử dụng để xác định thời gian nghỉ phép với Mary Skudma.
+. Lập lịch phỏng vấn với Jim Wack (mở rộng 2337) để làm rõ nguyên nhân dẫn đến các vấn đề với dữ liệu.
+Ghi chép chi tiết: Xem bản chép đính kèm
+
+
+Phát triển ứng dụng kết hợp
+. Cho phép đội dự án, người dùng, và người quản lý làm việc cùng nhau để xác định các yêu cầu cho hệ thống
+. Thường là phương pháp hữu hiệu nhất để thu thập thông tin từ người dùng
+. Vai trò chủ chốt:
+- Người điều phối
+- Người sao chép
+
+
+Phòng họp JAD
+Bảng trắng   Màn chiếu   Máy chiếu   Máy in   Thẻ tên   Máy tính
+
+
+Phiên JAD
+. Có xu hướng kéo dài từ 5 đến 10 ngày trong thời gian 3 tuần
+. Chuẩn bị các câu hỏi giống như với phỏng vấn
+. Lịch trình chính thức và các luật cơ sở
+. Các hoạt động của người điều phối
+- Giữ phiên họp đúng lịch trình
+- Trợ giúp với các thuật ngữ kỹ thuật và biệt ngữ
+- Tổ chức tư liệu của nhóm
+- Trợ giúp giải quyết vấn đề
+. Hậu xử lý kết quả phiên họp
+
+
+Quản lý vấn đề trong phiên JAD
+. Giảm thiểu sự chiếm ưu thế
+. Khuyến khích người ít tham gia
+. Thảo luận bên lề
+. Xoay vòng lịch trình
+. Bất đồng sâu sắc
+. Mâu thuẫn chưa được giải quyết
+. Mâu thuẫn thực sự.
+. Vận dụng khiếu hài hước.
+
+
+Khảo sát
+. Một tập câu hỏi được viết và sử dụng để thu thập thông tin từ nhiều cá nhân
+. Thường được sử dụng cho nhiều người mà thông tin và quan điểm của họ là cần thiết.
+. Là một kỹ thuật thông dụng đối với hệ thống có mục đích sử dụng bên ngòai tổ chức.
+. Tỉ lệ phản hồi có thể thay đổi, nhưng thường thấp hơn 50% rất nhiều
+
+
+Các bước khảo sát
+. Lựa chọn người tham gia
+- Lựa chọn đại diện của các nhóm
+. Thiết kế bản khảo sát
+- Thận trọng lựa chọn câu hỏi
+. Quản lý khảo sát
+- Hành động để đạt được tỉ lệ phản hồi cao
+. Hậu xử lý kết quả khảo sát
+- Gửi kết quả tới các thành viên
+
+
+Khảo sát được thiết kế tốt
+. Bắt đầu với những câu hỏi thú vị và không có tính đe dọa
+. Gom các mục vào thành các phân đoạn nhất quán về mặt logic
+. Không có các mục quan trọng ở cuối danh sách
+. Không để các hạng mục quá dày đặc trên một trang
+. Tránh viết tắt
+. Tránh những mục hoặc thuật ngữ sai lệch hoặc gợi ý
+. Đánh số câu hỏi để tránh nhầm lẫn. 
+. Kiểm tra sơ bộ để xác định những câu hỏi đa nghĩa
+. Cung cấp khả năng giấu tên cho người phản hồi
+
+
+Phân tích tài liệu
+. Cung cấp các manh mối về hệ thống hiện có
+. Văn bản thông dụng
+- Biểu mẫu
+- Báo cáo
+- Cẩm nang bảo hiểm
+. Tìm kiếm những bổ xung của người dùng vào biểu mẫu
+. Tìm kiếm những thành phần không được dùng trong biểu mẫu
+
+
+Quan sát
+. Người dùng/người quản lý thường không nhớ tất cả những gì họ làm
+. Kiểm tra tính đúng đắn của thông tin thu thập được theo một cách khác
+. Hành vi thay đổi khi người bị theo dõi
+. Cẩn thận, không loại trừ những hoạt động thường xuyên
+- Hàng tuần ... Hàng tháng ... Hàng năm
+
+
+Các kỹ thuật khác
+. Làm nguyên mẫu
+. Trò chơi nhập vai sử dụng thẻ CRC theo ca sử dụng
+. Ánh xạ khái niệm/ý niệm
+
+
+Lựa chọn kỹ thuật phù hợp
+   Phỏng vấn   JAD   Khảo sát   Phân tích tài liệu   Quan sát
+Loại thông tin   Hiện có, cải tiến, mới    Hiện có, cải tiến,  mới   Hiện có, cải tiến   Hiện có   Hiện có
+Độ sâu của thông tin   Cao   Cao   Trung bình   Thấp   Thấp
+Độ rộng của thông tin  Thấp   Trung bình   Cao   Cao   Thấp
+Tích hợp thông tin   Thấp   Cao   Thấp   Thấp   Thấp
+Sự tham gia của người dùng   Trung bình   Cao   Thấp   Thấp   Thấp
+Chi phí   Trung bình   Thấp-Trung bình   Thấp   Thấp    Thấp-trung bình
+
+
+Bản đề xuất hệ thống
+
+
+Bản đề xuất hệ thống
+. Kết quả của các pha lập kế hoạch và phân tích
+. Thường bao gồm:
+- Bố cục tài liệu
+- Yêu cầu hệ thống
+- Kế hoạch làm việc
+- Phân tích tính khả thi
+- Định nghĩa yêu cầu
+- Các mô hình hệ thống mở rộng dần
+
+
+Tổng hợp
+. Xác định yêu cầu
+. Các chiến lược phân tích yêu cầu
+. Các kỹ thuật thu thập yêu cầu
+. Đề xuất hệ thống
+

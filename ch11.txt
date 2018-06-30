@@ -1,0 +1,293 @@
+Chương 11:
+Thiết kế tầng tương tác Người-Máy
+
+
+Các mục tiêu
+. Hiểu một vài nguyên tắc thiết kế giao diện (GD) người dùng cơ bản 
+. Hiểu quy trình thiết kế GD
+. Hiểu cách thiết kế cấu trúc GD
+. Hiểu cách thiết kế các tiêu chuẩn GD
+. Hiểu các nguyên tắc và kỹ thuật thường được sử dụng cho thiết kế điều hướng
+
+
+Các mục tiêu (tiếp tục)
+. Hiểu các nguyên tắc và các kỹ thuật thường được sử dụng cho thiết kế nhập.
+. Hiểu các nguyên tắc và các kỹ thuật thường được sử dụng cho thiết kế  xuất.
+. Có khả năng thiết kế một giao diện người dùng.
+. Hiểu ảnh hưởng của các yêu cầu phi chức năng đến tầng tương tác người-máy.
+
+
+Tổng quát
+. Thiết kế giao diện hình thức hóa tương tác của hệ thống với các thực thể ngoại
+- Các giao diện hệ thống là tương tác máy-máy và được giải quyết như một phần của tích hợp hệ thống.
+- Các giao diện người dùng là người-máy và là trọng tâm của chương này.
+
+
+Các nguyên tắc thiết kế giao diện người dùng
+
+
+Các nguyên tắc thiết kế giao diện người dùng
+. Bố trí
+. Quan tâm đến nội dung
+. Mỹ học
+. Trải nghiệm người dùng
+. Tính nhất quán
+. Cố gắng tối thiểu của người dùng
+
+
+Bố trí chung
+Khu vực điều hướng
+Khu vực báo cáo & biểu mẫu
+Khu vực trạng thái
+
+
+Bố trí
+. Mỗi khu vực có thể tiếp tục được chia nhỏ
+. Mỗi khu vực là độc lập
+. Các khu vực nên có một luồng tự nhiên trực quan
+- Người phương tây có xu hướng đọc từ trái qua phải và từ trên xuống dưới
+- Người dùng từ những vùng miền khác có thể có những luồng khác
+
+
+Ý thức về nội dung
+. Một cách trực quan trả lời những câu hỏi của người dùng
+- Tôi đang ở đâu?
+- Tôi được cho là sẽ làm gì ở đây?
+. Áp dụng ý thức về nội dung cho các khu vực con bên trong một biểu mẫu hoặc cửa sổ
+- Các trường liên quan trong biểu mẫu (ví dụ, thông tin địa chỉ) được gom nhóm cùng nhau.
+- Các thông tin báo cáo liên quan (ví dụ, các bản ghi) được gom nhóm cùng nhau.
+
+
+Ý thức về nội dung biểu mẫu
+Thông tin bệnh nhân
+----------------------
+Tên bệnh nhân
+Họ:    Tên:   } Khu vực tên
+SĐT nhà:  SĐT Di Động: } Khu vực số điện thoại
+Bác sỹ điều trị:
+Họ:        Tên:
+...
+
+
+Ý thức về nội dung báo cáo
+Wiley: Wiley} Vùng bản ghi đầu tiên
+...
+Higher Education: Browse} Vùng bản ghi thứ hai
+....
+
+
+Mỹ học
+. Các giao diện cần phải hữu dụng, mời dùng, và hợp mắt
+. Trong hầu hết các tình huống, ít là hơn (thiết kế tối giản)
+. Các khoảng trống là quan trọng
+. Mật độ thông tin chấp nhận được tỉ lệ với kinh nghiệm người dùng
+- Người dùng mới thích mật độ thấp hơn 50%
+- Người dùng chuyên gia thích mật độ cao hơn 50%
+
+
+Kém thẩm mỹ
+{Một biểu mẫu có mật độ thông tin quá dày đặc có thể hữu dụng, nhưng không đẹp}
+
+
+Trải nghiệm người dùng
+. Dễ học
+- Vấn đề đáng kể đối với những người dùng chưa có kinh nghiệm
+- Có ý nghĩa đối với các hệ thống có số lượng người dùng lớn
+. Dễ sử dụng
+- Vấn đề đáng kể đối với người dùng chuyên gia
+- Quan trọng nhất trong các hệ thống chuyên biệt
+. Dễ học và dễ sử dụng đôi khi song hành
+
+
+Đa giao diện
+. Hệ điều hành Windows của Microsoft có nhiều giao diện cho cùng một chức năng
+. Hầu hết người dùng ưa sử dụng Windows Explorer để quản lý tệp
+. Người dùng chuyên gia đôi khi thích giao diện dòng lệnh hơn
+
+
+Tính nhất quán
+. Tất cả các bộ phận của hệ thống hoạt động theo cùng một cách
+. Các khu vực nhất quán thiết yếu gồm
+- Điều khiển điều hướng
+- Thuật ngữ
+. Có thể là khái niệm quan trọng nhất để làm hệ thống đơn giản, bởi vì nó cho phép người dùng dự đoán điều gì sẽ sảy ra.
+
+
+Cố gắng tối thiểu của người dùng
+. Các giao diện cần được thiết kế để giảm thiểu tối đa sự cố gắng của người dùng để hoàn thành các công việc.
+. Một luật thường dùng là luật cây-kích chuột
+- Các người dùng cần có khả năng di chuyển từ danh mục chính của một hệ thống tới thông tin mà họ muốn trong không nhiều hơn ba lần kích chuột    Kích lần 1   Kích lần 2   Kích lần 3
+
+
+Quá trình thiết kế giao diện người dùng
+
+
+Quá trình 5-bước thiết kế giao diện người dùng
+--> --[Phát triển tình huống sử dụng]--[Thiết kế cấu trúc giao diện]--[Thiết kế các tiêu chuẩn giao diện]--[Nguyên mẫu thiết kế giao diện]--[Kiểm tra giao diện]--
+
+
+Phát triển kịch bản sử dụng
+. Các kịch bản sử dụng phác thảo các bước được thực hiện bởi người dùng để hoàn thành vài phần công việc của họ
+. Một kịch bản sử dụng là một đường thông suốt một ca sử dụng cơ bản
+. Được biểu diễn trong một mô tả hẹp đơn giản
+. Ghi chép các tình huống thông dụng nhất sao cho các thiết kế giao diện sẽ dễ sử dụng cho các tình huống đó
+
+
+Thiết kế cấu trúc giao diện
+. Cấu trúc giao diện thiết lập
+- Các bộ phận cơ bản của giao diện
+- Cách chúng hoạt động cùng nhau để cung cấp chức năng cho người dùng
+. Các biểu đồ điều hướng cửa sổ (WND) biểu diễn
+- Cách các màn hình, biểu mẫu, và báo cáo được sử dụng bởi hệ thống được gắn kết với nhau
+- cách người dùng di chuyển từ một màn hình sang màn hình khác
+
+
+Các biểu đồ điều hướng cửa sổ
+. Giống như biểu đồ trạng thái cho giao diện người dùng
+- Các hộp biểu diễn các thành phần
+. Màn hình
+. Biểu mẫu
+. Báo cáo
+. Nút bấm
+- Các mũi tên biểu diễn các bước chuyển
+. Mũi tên đơn ngụ ý không trả về trạng thái gọi
+. Mũi tên kép biểu diễn trả về bắt buộc
+- Các khuôn mẫu biểu diễn loại giao diện
+
+
+Ví dụ WND
+Các khuôn mẫu: <<biểu mẫu>>   <<nút bấm>> ...
+
+|<<Cửa sổ>>     |
+|<<nút bấm>     |
+|Thêm khách hàng|--Kích-->| <<Biểu mẫu>>  |
+|               |         |Thêm khách hàng|
+|<<nút bấm>>    |                       
+|Tìm khách hàng |--Kích-->| <<Biểu mẫu>>  |
+                          |Tìm khách hàng |
+
+
+Thiết kế các tiêu chuẩn giao diện
+. Các tiêu chuẩn giao diện là các thành phần thiết kế cơ bản được tìm thấy thông suốt giao diện người dùng hệ thống
+. Các tiêu chuẩn là cần thiết cho:
+- Ẩn dụ giao diện
+- Các đối tượng giao diện
+- Các hành động giao diện
+- Các biểu tượng giao diện
+- Các mẫu giao diện
+
+
+Nguyên mẫu thiết kế giao diện
+. Các mô hình hoặc các mô phỏng của các màn hình máy tính, biểu mẫu, và các báo cáo 
+. Bốn cách tiếp cận thông dụng
+- Bảng chuyện kể
+- Biểu đồ bố trí màn hình
+- Nguyên mẫu HTML
+- Nguyên mẫu ngôn ngữ
+
+
+Ví dụ bảng chuyện kể
+Danh mục khách hàng
+Thêm khách hàng   --> Biểu mẫu thêm khách hàng
+Tìm khách hàng   --> Biểu mẫu tìm khách hàng
+Liệt kê khách hàng  --> Danh sách khách hàng
+
+
+Kiểm tra giao diện
+. Mục tiêu là hiểu cách cải tiến thiết kế giao diện trước khi hệ thống hoàn thành
+. Huy động tối đa số người kiểm tra giao diện
+. Lý tưởng, kiểm tra giao diện được hoàn thành trong khi hệ thống đang được thiết kế - trước khi nó được xây dựng.
+
+
+Bốn cách tiếp cận đối với kiểm tra giao diện
+. Tham lam
+. Xét duyệt
+. Tương tác
+. Kiểm tra khả dụng hình thức
+
+
+Thiết kế điều hướng
+
+
+Các nguyên tắc thiết kế điều hướng cơ bản
+. Ngăn chặn các nhầm lẫn
+. Đơn giản hóa việc khôi phục từ nhầm lẫn
+. Sử dụng trình tự ngữ pháp nhất quán
+
+
+Danh mục điều hướng chung
+Thanh danh mục
+Danh mục sổ xuống
+Các lệnh được chuyển mầu xám
+Danh mục nhiều tầng
+
+
+Thiết kế nhập
+
+
+Các nguyên tắc thiết kế nhập cơ bản
+. Trực tuyến so với xử lý gói
+. Bắt dữ liệu tại nguồn
+. Tối thiểu hóa số phím bấm
+
+
+Các kiểu nhập dữ liệu
+. Mẫu tự do
+- Hộp văn bản
+- Hộp số
+. Hộp lựa chọn
+- Hộp đánh dấu
+- Nút chọn
+- Hộp danh sách (trên màn hình, sổ xuống, hoặc tổ hợp)
+- Các thanh trượt
+
+
+Các kiểu kiểm tra nhập dữ liệu
+Kiểu kiểm tra    Tình huống sử dụng
+Kiểm tra tính đầy đủ     Khi một vài trường phải được nhập trước khi biểu mẫu có thể được xử lý
+Kiểm tra định dạng   Khi các trường là số hoặc chứa dữ liệu mã số
+Kiểm tra khoảng   Với tất cả dữ liệu kiểu số, nếu có thể
+Kiểm tra chữ số      Khi các mã số được sử dụng, giống như khi kiểm tra các số thẻ tín dụng
+Kiểm tra tính nhất quán   Khi dữ liệu có liên quan, ví dụ khi người dùng nhập đồng thời cả ngày sinh và ngày cưới (ngày sinh < ngày cưới)
+Kiểm tra cơ sở dữ liệu   Khi dữ liệu đã sẵn sàng để kiểm tra, giống như khi một người dùng lựa chọn một mã người dùng và chúng ta cần đảm bảo là nó chưa được sử dụng
+
+
+Thiết kế xuất dữ liệu
+
+
+Các nguyên lý thiết kế xuất dữ liệu cơ bản
+. Hiểu cách sử dụng báo cáo
+. Quản lý tải dữ liệu
+. Tối thiểu hóa sai lệch
+
+
+Các kiểu xuất dữ liệu
+. Báo cáo chi tiết
+. Báo cáo tổng kết
+. Các báo cáo ngoại lệ
+. Các tài liệu quay vòng
+. Các biểu đồ
+
+
+Các yêu cầu phi chức năng
+
+
+Các yêu cầu phi chức năng
+. Các yêu cầu vận hành
+- Các công nghệ được phép sử dụng (ví dụ, giao diện đồ họa, chuột)
+. Các yêu cầu hiệu năng
+- Bộ tốc độ và dung lượng giao diện người dùng
+. Các yêu cầu bảo mật
+- Giao diện người dùng bị hạn chế (ví dụ, máy ATM)
+. Các yêu cầu chính trị và văn hóa
+- Định dạng ngày, mầu sắc và các biểu tượng
+
+
+Tổng kết
+. Các nguyên tắc thiết kế giao diện người dùng
+. Quá trình thiết kế giao diện người dùng
+. Thiết kế điều hướng
+. Thiết kế nhập dữ liệu
+. Thiết kế xuất dữ liệu
+. Các yêu cầu phi chức năng
+

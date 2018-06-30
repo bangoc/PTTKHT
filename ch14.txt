@@ -1,0 +1,230 @@
+Chương 14:
+Cài đặt và vận hành
+
+
+Các mục tiêu
+. Làm quen với tiến trình cài đặt hệ thống
+. Hiểu các hình thức khác nhau của các chiến lược chuyển đổi và tình huống sử dụng chúng.
+. Hiểu một vài kỹ thuật để quản lý thay đổi
+. Làm quen với các tiến trình sau cài đặt
+
+
+Cài đặt & Vận hành
+. Quản lý thay đổi cho một hệ thống mới là một trong những tác vụ khó nhất trong bất kỳ tổ chức nào
+. Kế hoạch chuyển đổi thường bắt đầu khi các lập trình viên còn đang lập trình
+. Quản lý thay đổi tập trung vào nhân lực
+. Bảo trì có thể chiếm 80% ngân quỹ hệ thống thông tin
+
+
+Thực thi thay đổi
+Hệ thống đang có  --chuyển biến--> Hệ thống mới
+
+Phá băng       Dịch chuyển           Tái đóng băng
+---------      -----------          ----------
+Phân tích&   . Chuyển đổi kỹ thuật   Hỗ trợ &
+Thiết kế         . Quản lý thay đổi       Bảo trì
+
+
+Các vấn đề văn hóa và công nghệ thông tin
+
+
+Các vấn đề văn hóa
+. Khoảng cách quyền lực
+. Tránh những điều không chắc chắn
+. Cá nhân vs. tập thể
+. Phái mạnh vs. phái đẹp
+. Định hướng dài hạn vs. ngắn hạn
+
+
+Sự chuyển đổi
+
+
+Sự chuyển đổi
+. Sự chuyển đổi là tiến trình kỹ thuật theo đó một hệ thống mới thay thế một hệ thống cũ
+. Ba bước chính đối với kế hoạch chuyển đổi
+- Sở hữu và cài đặt các phần cứng cần thiết
+- Cài đặt phần mềm
+- Chuyển đổi dữ liệu
+. Ba chiều của một kế hoạch chuyển đổi
+- Phong cách chuyển đổi
+- Địa điểm chuyển đổi
+- Các mô-đun chuyển đổi
+
+
+Các chiến lược chuyển đổi
+Các mô đun  - Từng Mô-đun
+              Toàn hệ thống
+Phong cách - Trực tiếp
+             Song song
+Địa điểm - Thử nghiệm
+           Chia pha
+           Đồng thời
+
+
+Lựa chọn các chiến lược chuyển đổi
+. Rủi ro, chi phí, và thời gian: Lựa chọn hai tiêu trí bất kỳ
+. Rủi ro
+- Kể cả sau khi kiểm tra, các lỗi vẫn có thể tồn tại
+. Chi phí
+- Các tài nguyên dư thừa cho các bước chuyển biến có thể có giá cao
+. Thời gian
+- Chậm và an toàn hay nhanh và mạo hiểm?
+
+
+Các thành phần của các kế hoạch du nhập
+Kế hoạch chuyển đổi   | Cài đặt phần cứng
+(Các vấn đề kỹ thuật) | Cài đặt phần mềm
+                      | Chuyển đổi dữ liệu
+
+Kế hoạch quản lý thay đổi
+(Các vấn đề tổ chức)
+         | Kiểm tra các chính sách quản lý
+         | Đánh giá chi phí và lợi ích
+         | Khuyến khích tiếp nhận
+         | Tổ chức đào tạo
+  ↓ ↓ 
+Các thao tác khởi đầu
+
+
+Quản lý thay đổi
+
+
+Quảy lý thay đổi
+. Tiến trình giúp mọi người chấp nhận & thích nghi với hệ thống mới và các tiến trình công việc bổ trợ tránh nhấn mạnh quá mức
+. Các vai trò chính
+- Nhà tài trợ
+- Chuyên viên thay đổi
+- Những người chấp nhận tiềm năng
+. "Xây dựng nó và mọi người sẽ đến" không xảy ra!
+
+
+Kháng cự đối với thay đổi
+. Điều gì tốt cho công ty thì thường không tốt cho người bên trong nó
+. Mọi người thực hiện các phân tích chi phí-lợi ích của riêng họ
+- Hầu hết sẽ đánh giá quá cao chi phí và đánh giá quá thấp lợi ích
+- Cần phải tính đến chi phí của quá trình chuyển biến
+- Chi phí và hiệu quả nhận thấy được định hình thái độ
+
+
+Chi phí & Lợi ích của thay đổi
+Hệ thống đang có   --Thay đổi--> Hệ thống mục tiêu
+<-- Các nhân tố ngăn cản: Chi phí của sự thay đổi x Sự chắc chắn của chi phí phát sinh
+Các nhân tố cho phép -->: Lợi ích của sự thay đổi x Sự chắc chắn của lợi ích phát sinh
+
+<-- Các nhân tố ngăn cản: Chi phí của hệ thống đích x Sự chắc chắn của chi phí phát sinh
+Các nhân tố cho phép -->: Lợi ích của hệ thống đích x Sự chắc chắn của lợi ích phát sinh
+
+
+Xem lại các chính sách quản lý
+. Các chính sách quản lý
+- Cung cấp các mục tiêu
+- Xác định cách thức các quy trình công việc cần được thực hiện
+- Xác định cách mọi người được trao thưởng
+. Không có hệ thống máy tính nào sẽ được chấp nhận thành công trừ phi các chính sách quản lý ủng hộ sự chấp nhận nó
+
+
+Các công cụ tổ chức quá trình làm việc
+. Các quy trình vận hành tiêu chuẩn
+- SOPs phải được xem lại để khớp với hệ thống mới
+. Các thước đo và phần thưởng
+- Thích nghi để khích lệ các hành vi (sự chấp nhận) mong muốn
+. Cấp phát tài nguyên
+- Ảnh hưởng trực tiếp là sự cấp phát lại thực tế của các tài nguyên
+- Ảnh hưởng biểu tượng thể hiện rằng sự quản lý là nghiêm túc về hệ thống mới 
+
+
+Đánh giá chi phí & Lợi ích
+. Hai góc nhìn: Tổ chức & người chấp nhận
+. Tính đến cả các ảnh hưởng đồng thời lên người dùng cuối, và những quản lý trung gian của họ.
+. Muc tiêu là thuyết phục các đối thủ chuyển sang ủng hộ
+- Có thể cần đến những thay đổi quản lý đáng kể để ngăn chặn sự phản đối tập thể
+. Thành công của tổ chức có thể thực sự làm lu mờ sự sẵn sàng đón nhận một hệ thống mới
+- "Vì sao phải sửa nó nếu nó không hòng?"
+
+
+Khuyến khích sự chấp nhận
+. Cung cấp các bằng chứng rõ ràng và thuyết phục về sự cần thiết của thay đổi
+. Hai chiến lược cơ bản để khuyến khích chấp nhận là 
+- Chiến lược thông tin
+- Chiến lược chính trị
+. Mục tiêu quản lý thay đổi là hỗ trợ và khuyến khích những người chấp nhận sẵn sàng và giúp họ chiến thắng những người chấp nhận miễn cưỡng.
+
+
+Các thái độ của tổ chức
+Chống lại tiếp nhận: 25%
+Sẵn sàng tiếp nhận: 25%
+Chấp nhận miễn cưỡng: 50%
+
+
+Đào tạo
+. Sự chấp nhận là được phép bằng cách cung cấp các kỹ năng cần thiết để chấp nhận thay đổi.
+. Đào tạo không nên tập trung vào sử dụng hệ thống.
+. Đào tạo nên tập trung vào giúp đỡ người dùng hoàn thành công việc của họ.
+. Đào tạo theo lớp là phổ thông nhất, nhưng các lựa chọn khác là tốt hơn cho những tình huống cụ thể.
+
+
+Lựa chọn các phương pháp đào tạo
++ Chi phí phát triển:
+- Đào tạo theo lớp: Trung bình
+- Đào tạo Một-một: Thấp-Trung bình
+- Đào tạo dựa trên máy tính: Cao
++ Chi phí chuyển giao:
+- Đào tạo theo lớp: Trung bình
+- Đào tạo Một-Một: Cao
+- Đào tạo dựa trên máy tính: Thấp
++ Ảnh hưởng: 
+- Đào tạo theo lớp: Trung bình-cao
+- Đào tạo Một-một: Cao
+- Đào tạo dựa trên máy tính: Thấp-Trung bình
++ Đạt được:
+- Đào tạo theo lớp: Trung bình
+- Đào tạo một-một: Thấp
+- Đào tạo dựa trên máy tính: Cao
+
+
+Các hoạt động sau thực thi
+
+
+Hỗ trợ hệ thống
+. Nhóm vận hành chịu trách nhiệm cho việc chạy hệ thống sau khi cài đặt.
+. Các hình thức hỗ trợ hệ thống
+- Đào tạo theo nhu cầu
+- Hỗ trợ trực tuyến
+- Trợ giúp kỹ thuật
+. Mức I, hỗ trợ cần đáp ứng 80% vấn đề
+. Mức II, đội ngũ hỗ trợ giải quyết các vấn đề tồn đọng sau khi báo cáo vấn đề được cung cấp bởi mức I
+
+
+Các thành phần của một báo cáo vấn đề
+. Thời gian và ngày báo cáo
+. Thông tin liên lạc cho người hỗ trợ lấy báo cáo
+. Thông tin liên lạc của người báo cáo vấn đề
+. Phần mềm và/hoặc phần cứng làm phát sinh vấn đề.
+. Địa điểm của vấn đề
+. Mô tả vấn đề
+. Hành động được thực hiện
+. Bố trí (vấn đề được giải quyết hoặc được chuyển qua cho người bảo trì hệ thống)
+
+
+Bảo trì hệ thống
+. Quá trình tái thiết hệ thống để đảm bảo chắc chắn rằng nó tiếp tục phù hợp với các nhu cầu nghiệp vụ.
+. Đắt hơn phát triển ban đầu
+. Các yêu cầu thay đổi là những phiên bản nhỏ của một yêu cầu hệ thống
+
+
+Xử lý một yêu cầu thay đổi
+Báo cáo vấn đề --1. Thay đổi tiềm năng--> Quản lý dự án
+Người dùng; Các thay đổi với những hệ thống khác; Những thay đổi phần mềm hoặc mạng --> Quản lý dự án.
+Quản lý dự án --2. Yêu cầu thay đổi cùng với tính khả thi, chi phí, và lợi ích --> Hội đồng thay đổi 
+Hội đồng thay đổi --3. Thứ tự ưu tiên;--> Quản lý dự án
+Người quản lý dự án --4. Yêu cầu thay đổi--> Người phân tích
+Người phân tích --5. Thiết kế--> Lập trình viên
+Lập trình viên --6. Hệ thống đã thay đổi-->Quản lý dự án
+
+
+Tổng kết
+. Các vấn đề văn hóa và công nghệ thông tin
+. Chuyển đổi
+. Quản lý thay đổi
+. Các hoạt động sau thực thi
+
