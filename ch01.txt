@@ -2,7 +2,7 @@ Chương 1. Giới thiệu phân tích và thiết kế hệ thống
 
 
 Mục tiêu
-Hiểu vòng đời phát triển nền tảng của hệ thống và bốn pha trong đó
+Hiểu nền tảng vòng đời phát triển của hệ thống và bốn pha trong đó
 Hiểu sự tiến hóa của các hệ phương pháp phát triển hệ thống
 Làm quen với quy trình thống nhất (Unified Process) và các mở rộng của nó
 Làm quen với các vai trò khác nhau trong đội dự án
@@ -22,15 +22,15 @@ Hewlett-Packard Co.  2004  Các vấn đề của Hệ thống hoạch định t
 AT&T Wireless  2004   Các vấn đề liên quan đến cập nhật hệ thống quản lý quan hệ khách hàng dẫn đến thiệt hại 100 triệu đô-la.
 
 
-Vòng đời phát triển hệ thống
+Vòng đời phát triển hệ thống (SDLC)
 
 
 Vòng đời phát triển hệ thống
-Lập kế hoạch -> Phân tích -> Thiết kế -> Triển khai -> Lập kế hoạch -> ...
+Tiến trình lặp (Lập kế hoạch -> Phân tích -> Thiết kế -> Triển khai)
 
 
 SDLC: Lập kế hoạch
-1. Khởi tạo dự án
+1. Khởi dựng dự án
 - Xây dựng một đề xuất hệ thống
 - Thực hiện phân tích tính khả thi
 2. Quản lý dự án
@@ -78,12 +78,12 @@ Thiết kế   Đặc tả hệ thống
 Triển khai   Hệ thống mới và kế hoạch bảo trì
 
 
-Các hệ phương pháp phát triển hệ thống
+Các phương pháp phát triển hệ thống
 
 
-Các hệ phương pháp phát triển hệ thống
-Một hệ phương pháp là một cách triển khai vòng đời phát triển hệ thống sử dụng cách tiếp cận hình thức
-Các hệ phương pháp tiêu biểu gồm có:
+Các phương pháp phát triển hệ thống
+Một phương pháp là một cách cách tiếp cận hình thức triển khai vòng đời phát triển hệ thống
+Các phương pháp tiêu biểu gồm có:
 - Phát triển thác nước
 - Phát triển song song
 - Mô hình V
@@ -91,16 +91,16 @@ Các hệ phương pháp tiêu biểu gồm có:
 - Phát triển Agile
 
 
-Danh mục các hệ phương pháp
+Danh mục các phương pháp
 . Thiết kế có cấu trúc
-- Phát triển thác nước
-- Phát triển song song
+  - Phát triển thác nước
+  - Phát triển song song
 . Phát triển nhanh ứng dụng
-- Chia pha
-- Làm nguyên mẫu
-- Vứt bỏ nguyên mẫu
+  - Chia pha
+  - Làm nguyên mẫu
+  - Vứt bỏ nguyên mẫu
 . Phát triển Agile
-- Lập trình mạo hiểm
+  - Lập trình mạo hiểm
 
 
 Thiết kế có cấu trúc 1
@@ -118,6 +118,7 @@ Lập kế hoạch    Phân tích  Thiết kế
    Thiết kế   Triển khai   Hệ thống con 2
    Thiết kế   Triển khai   Hệ thống con 3
        Triển khai   Hệ thống
+Phát triển song song
 
 
 Phát triển nhanh ứng dụng 1
@@ -125,56 +126,58 @@ Lập kế hoạch  Phân tích
     Phân tích    Thiết kế     Triển khai   (Hệ thống phiên bản 1)
               Phân tích    Thiết kế    Triển khai   (Hệ thống phiên bản 2)
                  Phân tích    Thiết kế    Triển khai   (Hệ thống phiên bản 3)
+Phát triển chia pha
 
 
 Phát triển nhanh ứng dụng 2
 Lập kế hoạch
-    [Phân tích    Thiết kế     Triển khai]   (Nguyên mẫu hệ hống)  Triển khai  (Hệ thống)
+    [Phân tích    Thiết kế     Triển khai]   (Nguyên mẫu hệ thống)  Triển khai  (Hệ thống)
 Làm nguyên mẫu hệ thống
 
 
 Phát triển nhanh ứng dụng 3
 Lập kế hoạch Phân tích
    [Phân tích    Thiết kế   Triển khai]   (Nguyên mẫu thiết kế)
-             Thiết kế Triển khai (Hệ thống)
+             Thiết kế   Triển khai (Hệ thống)
 Vứt bỏ nguyên mẫu
 
 
 Phát triển Agile
 Lập kế hoạch
    [Phân tích   Thiết kế     Triển khai]     (Hệ thống)
+Lập trình mạo hiểm
 
 
-Lựa chọn phương pháp đúng
-Khả năng hữu ích cho    Thác nước   Song song   Chia pha  Làm nguyên mẫu    Vứt bỏ nguyên mẫu     Lập trình mạo hiểm
-Yêu cầu người dùng không rõ ràng      Ít    Ít   Tốt    Tuyệt vời    Tuyệt vời    Tuyệt vời
-Công nghệ xa lạ   Ít    Ít   Tốt    Ít  Tuyện vời    Ít
-Hệ thống phức tạp    Tốt    Tốt   Tốt   Ít    Tuyệt vời     Ít
-Hệ thống ổn định   Tốt   Tốt   Tốt   Ít    Tuyệt vời    Tốt
-Lịch trình ngắn   Ít    Tốt    Tuyệt vời    Tuyệt vời    Tốt    Tuyệt vời
-Chi tiết lịch trình   Ít    Ít   Tuyệt vời   Tuyệt vời     Tốt    Tốt
+Lựa chọn đúng phương pháp
+Khả năng hữu ích đối với    Thác nước   Song song   Chia pha  Làm nguyên mẫu    Vứt bỏ nguyên mẫu     Lập trình mạo hiểm
+Yêu cầu người dùng không rõ ràng      Kém    Kém   Tốt    Tuyệt vời    Tuyệt vời    Tuyệt vời
+Công nghệ xa lạ   Kém    Kém   Tốt    Kém  Tuyện vời    Kém
+Hệ thống phức tạp    Tốt    Tốt   Tốt   Kém    Tuyệt vời     Kém
+Hệ thống ổn định   Tốt   Tốt   Tốt   Kém    Tuyệt vời    Tốt
+Lịch trình ngắn   Kém    Tốt    Tuyệt vời    Tuyệt vời    Tốt    Tuyệt vời
+Chi tiết lịch trình   Kém    Kém   Tuyệt vời   Tuyệt vời     Tốt    Tốt
 
 
 Phân tích và thiết kế hướng đối tượng
-. Cố gắng cân bằng các điểm nhấn lên dữ liệu và tiến trình
+. Nỗ lực cân bằng các điểm nhấn lên dữ liệu và tiến trình
 . Sử dụng ngôn ngữ mô hình hóa thống nhất (UML)
 . Các đặc điểm của OOAD:
-- Dẫn dắt bởi ca sử dụng
-- Kiến trúc trung tâm
-- Lặp và tăng trưởng
+  - Dẫn dắt bởi ca sử dụng
+  - Kiến trúc trung tâm
+  - Lặp và tăng trưởng
 
 
 Quy trình thống nhất
 
 
-Quy trình thống nhất
-. Một phương pháp cụ thể có tham chiếu khi nào sử dụng những kỹ thuật UML như thế nào cho phân tích và thiết kế hướng đối tượng
+Quy trình thống nhất (1)
+. Một phương pháp cụ thể có tham chiếu chi tiết khi nào sử dụng những kỹ thuật UML như thế nào cho phân tích và thiết kế hướng đối tượng
 . Một quy trình hai chiều bao gồm pha và các luồng
 - Các pha mô tả hệ thống tiến triển như thế nào theo thời gian
 - Các luồng là các nhóm tác vụ xuất hiện xuyên suốt vòng đời phát triển hệ thống, nhưng có sự khác biệt về cường độ
 
 
-Quy trình thống nhất
+Quy trình thống nhất (2)
         Các luồng kỹ thuật
 Pha   Bắt đầu   Mở rộng     Xây dựng    Chuyển giao
 Mô hình hóa ngiệp vụ
@@ -208,7 +211,7 @@ Các luồng kỹ thuật
 . Phân phối
 
 
-Các luồng bổ trợ
+Các luồng hỗ trợ
 . Quản lý dự án
 . Tùy chỉnh và quản lý thay đổi
 . Môi trường
@@ -217,10 +220,10 @@ Các luồng bổ trợ
 * Thành phận của quy trình thống nhất cải tiến
 
 
-Ngôn ngữ mô hình hóa đồng nhất
+Ngôn ngữ mô hình hóa thống nhất
 
 
-Ngôn ngữ mô hình hóa đồng nhất
+Ngôn ngữ mô hình hóa thống nhất
 . Cung cấp một bộ từ vựng chung gồm các thuật ngữ hướng đối tượng và các kỹ thuật biểu đồ đủ để mô hình hóa bất kỳ dự án phát triển hệ thống nào từ phân tích tới triển khai
 . Phiên bản 2.0 có 14 biểu đồ chia làm hai nhóm chính
 - Biểu đồ cấu trúc
@@ -280,13 +283,13 @@ Quản lý dự án           Quản lý đội
                         Giữ vai trò điểm giao tiếp chính của dự án
 
 
-Tổng hợp
-. Về cơ bản tất cả các dự án phát triển hệ thống đều tuân theo một quy trình chung, gọi là vòng đời phát triển hệ thống (SDLC)
+Tổng kết
+. Về cơ bản tất cả các dự án phát triển hệ thống đều tuân theo một quy luật chung, gọi là vòng đời phát triển hệ thống (SDLC)
 . Các hệ phương pháp phát triển hệ thống là các cách tiếp cận hình thức triển khai vòng đời phát triển hệ thống
 . Phân tích và thiết kế hệ thống hướng đối tượng (OOAD) sử dụng phương pháp phát triển hệ thống có các đặc điểm cơ bản là: Dẫn dắt bởi ca sử dụng, kiến trúc trung tâm, lặp và tăng trưởng.
 
 
-Tổng hợp
+Tổng kết
 . Quy trình thống nhất là một là một quy trình phát triển hai chiều với tập các pha và tập các luồng
 . Ngôn ngữ mô hình hóa thống nhất - UML, là một tập các kỹ thuật mô hình hóa tiêu chuẩn bằng biểu đồ
 . Một nhóm dự án cần nhiều kỹ năng trên phạm vi rộng
