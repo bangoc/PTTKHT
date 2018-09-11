@@ -1,9 +1,10 @@
 Chương 2:
 Chuẩn bị dự án,
-Quản lý dự án & Xác định yêu cầu
+Quản lý dự án & 
+Xác định yêu cầu
 
 
-Mục tiêu
+Các mục tiêu
 . Hiểu sự quan trọng của việc liên kết hệ thống thông tin với nhu cầu kinh tế.
 . Có khả năng tạo yêu cầu dự án.
 . Hiểu cách đánh giá tính khả thi kỹ thuật, kinh tế và tổ chức.
@@ -12,12 +13,15 @@ Mục tiêu
 
 
 Các dự án thành công
-. Chi phí: Khi kết thúc dự án, không có chi phí phát sinh so với khoản chi ban đầu.
-. Lịch trình: Dự án được chuyển giao không chậm hơn so với thời gian đã định.
-. Họat động: Sau khi chuyển giao, dự án có tất cả các tính năng và chức năng được yêu cầu từ đầu.
+. Chi phí
+  Khi kết thúc dự án, không có chi phí phát sinh so với khoản chi ban đầu.
+. Lịch trình
+  Dự án được chuyển giao không chậm hơn so với thời gian đã định.
+. Họat động
+  Sau khi chuyển giao, dự án có tất cả các tính năng và chức năng được yêu cầu từ đầu.
 
 
-Vì sao chúng ta phải quan tâm
+Vì sao chúng ta nên quan tâm?
 Bạn có muốn mua một chiếc ô tô với xác suất lái nó mà không gặp vấn đề gì chỉ là 28%?
 
 
@@ -49,7 +53,7 @@ Giá trị kinh tế
 - Có thể dễ dàng định lượng và đo được
 - Ví dụ: Giảm 2% chi phí vận hành
 . Giá trị vô hình
-- Là kết quả từ niềm tin trực quan rằng hệ thống tạo ra những lợi ích quan trọng, nhưng khó đo đạc cho tổ chức.
+- Là kết quả từ niềm tin trực quan rằng hệ thống tạo ra những lợi ích khó đo đạc,  cho tổ chức.
 - Ví dụ: Cải thiện dịch vụ khách hàng.
 
 
