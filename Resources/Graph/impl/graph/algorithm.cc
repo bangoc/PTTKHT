@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <queue>
+#include <set>
 
 bool Algorithm::Dijkstra(
               AdjacentGraph* g,
@@ -10,6 +11,8 @@ bool Algorithm::Dijkstra(
               double& length) {
   std::map<int, double> dist;
   dist[b] = 0;
+  std::set<int> visited;
+  visited.insert(b);
   while (!dist.empty()) {
     auto min_iter = dist.begin();
     for (auto iter = dist.begin(); iter != dist.end(); ++iter) {
@@ -36,9 +39,10 @@ bool Algorithm::Dijkstra(
           dist[v2] = d + weight;
           back[v2] = v;
         }
-      } else {
+      } else if (visited.find(v2) == visited.end()) {
         dist[v2] = d + weight;
         back[v2] = v;
+        visited.insert(v2);
       }
     }
   }
