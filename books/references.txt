@@ -3,3 +3,4 @@
 3. Eric Freeman, Elisabeth Freeman (Head first). Design Patterns.
 4. Eric Gamma, Richard Helm, Ralph Johnson, John Vlissides. Design Patterns (Elements of Reusable Object-Oriented Software).
 5. Len Silverston. The Data Model Resource Book. Revised edition, Vol 1.
+6. Joseph S. Valacich, Joey F. George. Modern Systems Analysis and Design (8th edition).
