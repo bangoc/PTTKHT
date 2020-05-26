@@ -5,7 +5,7 @@ apply plugin: 'application'
 
 sourceCompatibility = 1.8
 
-mainClassName = "ClockController"
+mainClassName = "ClockMain"
 
 repositories {
     mavenCentral()
