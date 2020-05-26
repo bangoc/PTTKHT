@@ -1,17 +1,22 @@
 public class ClockModel {
-	private int minutes;
+	private int time;
 
 	public ClockModel(int m) {
-		minutes = m;
+		time = m;
+	}
+	public int getHours() {
+		return time / 3600;
 	}
 	public int getMinutes() {
-		return minutes;
+		return (time % 3600) / 60;
 	}
-	public void setMinutes(int m) {
-		minutes = m;
+	public int getSeconds() {
+		return time % 60;
+	}
+	public void setTimeInSeconds(int t) {
+		time = t;
 	}
 	public void advance() {
-		minutes++;
-		return;
+		++time;
 	}
 }
