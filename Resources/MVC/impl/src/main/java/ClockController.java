@@ -14,9 +14,9 @@ public class ClockController extends JFrame {
   public ClockController() {
     contentPane = getContentPane();
     setSize(300, 200 );
-    setTitle( "MVC Clock" );
+    setTitle("MVC Clock");
     buttonHolder = new JPanel();
-    contentPane.add( buttonHolder, BorderLayout.SOUTH );
+    contentPane.add(buttonHolder, BorderLayout.SOUTH);
 
 		tickButton = new JButton("Tick");
 		resetButton = new JButton("Reset");
@@ -28,24 +28,32 @@ public class ClockController extends JFrame {
 
 		model= new ClockModel(kStart);
 		view= new ClockView(model);
-		contentPane.add( view, BorderLayout.CENTER );
+		contentPane.add(view, BorderLayout.CENTER);
 
 		tickButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				model.advance();
-				view.repaint();
-				setLabels();
+				advance(ae);
 			}
 		});
 
 		resetButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				model.setTimeInSeconds(kStart);
-				view.repaint();
-				setLabels();
+				reset(ae);
 			}
 		});
-    }
+  }
+
+  public void advance(ActionEvent ae) {
+    model.advance();
+    view.repaint();
+    setLabels();
+  }
+
+  public void reset(ActionEvent ae) {
+    model.setTimeInSeconds(kStart);
+    view.repaint();
+    setLabels();
+  }
 
 	public void setLabels() {
     String s = "";
@@ -70,9 +78,9 @@ public class ClockController extends JFrame {
 		timeLabel.setText(s);
 	}
 
-    public static void main(String[] args) {
-        ClockController application = new ClockController() ;
-        application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE) ;
-        application.setVisible(true) ;
-    }
+  public static void main(String[] args) {
+    ClockController application = new ClockController() ;
+    application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE) ;
+    application.setVisible(true) ;
+  }
 }
